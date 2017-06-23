@@ -1,0 +1,8 @@
+name: Dump-JSON
+entrypoint: "billy-util dumpjson --upload --novalidate --apikey backup-key ak al ar az ca co ct dc de fl ga hi ia id il in ks ky la ma md me mi mn mo ms mt nc nd ne nh nj nm nv ny oh ok or pa pr ri sc sd tn tx ut va vt wa wi wv wy"
+memory_soft: 128
+cron: 0 2 1 * ? *
+enabled: false
+environment: {}
+credstash: tasks
+image: openstates/openstates

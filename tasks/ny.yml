@@ -1,0 +1,7 @@
+name: NY
+entrypoint: ./pupa-scrape.sh ny
+memory_soft: 128
+cron: 0 5 * * ? *
+environment: openstates
+credstash: scrapers
+image: openstates/openstates

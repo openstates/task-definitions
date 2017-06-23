@@ -1,0 +1,7 @@
+name: ME
+entrypoint: ./pupa-scrape.sh me bills people
+memory_soft: 128
+cron: 0 4 * * ? *
+environment: openstates
+credstash: scrapers
+image: openstates/openstates

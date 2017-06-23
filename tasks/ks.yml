@@ -1,0 +1,8 @@
+name: KS
+entrypoint: ./pupa-scrape.sh ks --rpm 12
+memory_soft: 128
+cron: 1 6 * * ? *
+enabled: true
+environment: openstates
+credstash: scrapers
+image: openstates/openstates

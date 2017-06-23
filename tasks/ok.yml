@@ -1,0 +1,8 @@
+name: OK
+entrypoint: ./pupa-scrape.sh ok bills
+memory_soft: 128
+enabled: true
+cron: 1 6 * * ? *
+environment: openstates
+credstash: scrapers
+image: openstates/openstates

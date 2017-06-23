@@ -1,0 +1,8 @@
+name: AZ
+entrypoint: ./pupa-scrape.sh az people bills committees
+memory_soft: 128
+cron: 0 7 * * ? *
+enabled: true
+environment: openstates
+credstash: scrapers
+image: openstates/openstates

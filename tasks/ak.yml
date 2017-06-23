@@ -1,0 +1,7 @@
+name: AK
+entrypoint: ./pupa-scrape.sh ak people bills committees
+memory_soft: 128
+cron: 0 8 * * ? *
+environment: openstates
+credstash: scrapers
+image: openstates/openstates

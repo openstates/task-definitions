@@ -1,0 +1,8 @@
+name: RI
+entrypoint: ./pupa-scrape.sh ri bills people committees
+memory_soft: 128
+cron: 0 5 * * ? *
+enabled: true
+environment: openstates
+credstash: scrapers
+image: openstates/openstates

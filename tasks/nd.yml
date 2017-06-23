@@ -1,0 +1,7 @@
+name: ND
+entrypoint: ./pupa-scrape.sh nd
+memory_soft: 128
+cron: 0 7 * * ? *
+environment: openstates
+credstash: scrapers
+image: openstates/openstates

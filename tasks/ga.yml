@@ -1,0 +1,7 @@
+name: GA
+entrypoint: ./pupa-scrape.sh ga
+memory_soft: 128
+cron: 0 5 * * ? *
+environment: openstates
+credstash: scrapers
+image: openstates/openstates

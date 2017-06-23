@@ -1,0 +1,8 @@
+name: IA
+entrypoint: ./pupa-scrape.sh ia 
+memory_soft: 128
+cron: 1 6 * * ? *
+enabled: true
+environment: openstates
+credstash: scrapers
+image: openstates/openstates

@@ -1,0 +1,8 @@
+name: IL
+entrypoint: ./pupa-scrape.sh il bills committees people
+memory_soft: 128
+cron: 0 6 * * ? *
+enabled: true
+environment: openstates
+credstash: scrapers
+image: openstates/openstates
