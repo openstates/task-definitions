@@ -1,5 +1,5 @@
 name: NJ
-entrypoint: ./pupa-scrape.sh nj
+entrypoint: ./pupa-scrape.sh nj bills people committees
 memory_soft: 128
 cron: 0 4 * * ? *
 environment: openstates
