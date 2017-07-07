@@ -1,5 +1,5 @@
 name: OK
-entrypoint: ./pupa-scrape.sh ok bills
+entrypoint: ./pupa-scrape.sh ok bills people committees
 memory_soft: 128
 enabled: true
 cron: 1 6 * * ? *

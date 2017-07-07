@@ -1,5 +1,5 @@
 name: DE
-entrypoint: ./pupa-scrape.sh de
+entrypoint: ./pupa-scrape.sh de people bills committees
 memory_soft: 128
 cron: 0 5 * * ? *
 enabled: true

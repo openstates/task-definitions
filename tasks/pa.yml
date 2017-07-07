@@ -1,5 +1,5 @@
 name: PA
-entrypoint: ./pupa-scrape.sh pa
+entrypoint: ./pupa-scrape.sh pa people bills committees
 memory_soft: 128
 cron: 0 5 * * ? *
 environment: openstates
