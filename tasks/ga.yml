@@ -1,5 +1,5 @@
 name: GA
-entrypoint: ./pupa-scrape.sh ga
+entrypoint: ./pupa-scrape.sh ga bills people
 memory_soft: 128
 cron: 0 5 * * ? *
 environment: openstates

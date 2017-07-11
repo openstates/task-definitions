@@ -1,5 +1,5 @@
 name: IA
-entrypoint: ./pupa-scrape.sh ia 
+entrypoint: ./pupa-scrape.sh ia people bills votes
 memory_soft: 128
 cron: 1 6 * * ? *
 enabled: true
