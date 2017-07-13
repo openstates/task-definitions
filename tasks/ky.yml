@@ -1,5 +1,5 @@
 name: KY
-entrypoint: ./pupa-scrape.sh ky
+entrypoint: ./pupa-scrape.sh ky people bills
 memory_soft: 128
 cron: 0 6 * * ? *
 enabled: true

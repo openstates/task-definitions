@@ -1,5 +1,5 @@
 name: MT
-entrypoint: ./pupa-scrape.sh mt
+entrypoint: ./pupa-scrape.sh mt bills people
 memory_soft: 128
 cron: 0 7 * * ? *
 enabled: true
