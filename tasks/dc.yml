@@ -1,5 +1,5 @@
 name: DC
-entrypoint: ./pupa-scrape.sh dc
+entrypoint: ./pupa-scrape.sh dc people committees bills
 memory_soft: 128
 cron: 0 5 * * ? *
 environment: openstates
