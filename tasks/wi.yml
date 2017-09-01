@@ -1,5 +1,5 @@
 name: WI
-entrypoint: ./pupa-scrape.sh wi
+entrypoint: ./pupa-scrape.sh wi bills committees people
 memory_soft: 128
 cron: 0 6 * * ? *
 environment: openstates
