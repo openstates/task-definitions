@@ -1,5 +1,5 @@
 name: WI
-entrypoint: ./pupa-scrape.sh wi bills session="2017 Regular Session" committees people
+entrypoint: ["./pupa-scrape.sh", "wi", "bills", "session=2017 Regular Session", "committees", "people"]
 memory_soft: 128
 cron: 0 6 * * ? *
 environment: openstates
