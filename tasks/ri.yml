@@ -1,5 +1,5 @@
 name: RI
-entrypoint: ./pupa-scrape.sh ri bills people committees
+entrypoint: ./pupa-scrape.sh ri
 memory_soft: 128
 cron: 0 5 * * ? *
 enabled: true

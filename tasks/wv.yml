@@ -1,5 +1,5 @@
 name: WV
-entrypoint: ./pupa-scrape.sh wv people bills
+entrypoint: ./pupa-scrape.sh wv
 memory_soft: 128
 cron: 0 5 * * ? *
 enabled: true

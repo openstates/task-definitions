@@ -1,5 +1,5 @@
 name: TN
-entrypoint: ./pupa-scrape.sh tn bills people
+entrypoint: ./pupa-scrape.sh tn
 memory_soft: 128
 cron: 0 5 * * ? *
 environment: openstates

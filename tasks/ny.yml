@@ -1,5 +1,5 @@
 name: NY
-entrypoint: ./pupa-scrape.sh ny people bills
+entrypoint: ./pupa-scrape.sh ny
 memory_soft: 128
 cron: 0 5 * * ? *
 environment: openstates

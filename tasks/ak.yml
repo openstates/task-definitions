@@ -1,5 +1,5 @@
 name: AK
-entrypoint: ./pupa-scrape.sh ak people bills 
+entrypoint: ./pupa-scrape.sh ak
 memory_soft: 128
 cron: 0 8 * * ? *
 environment: openstates

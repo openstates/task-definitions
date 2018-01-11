@@ -1,7 +1,8 @@
 name: IN
-entrypoint: ./pupa-scrape.sh in people bills
+entrypoint: ./pupa-scrape.sh in
 memory_soft: 128
 cron: 0 6 * * ? *
 environment: openstates
 credstash: scrapers
 image: openstates/openstates
+enabled: false

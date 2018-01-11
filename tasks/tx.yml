@@ -1,5 +1,5 @@
 name: TX
-entrypoint: ./pupa-scrape.sh tx people bills committees  # votes disabled for special session
+entrypoint: ./pupa-scrape.sh tx
 memory_soft: 128
 cron: 0 5 * * ? *
 environment: openstates

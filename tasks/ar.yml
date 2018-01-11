@@ -1,5 +1,5 @@
 name: AR
-entrypoint: ./pupa-scrape.sh ar bills
+entrypoint: ./pupa-scrape.sh ar
 memory_soft: 128
 cron: 0 6 * * ? *
 environment: openstates

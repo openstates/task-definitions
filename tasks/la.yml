@@ -1,5 +1,5 @@
 name: LA
-entrypoint: ./pupa-scrape.sh la bills people
+entrypoint: ./pupa-scrape.sh la
 memory_soft: 128
 cron: 0 6 * * ? *
 enabled: true

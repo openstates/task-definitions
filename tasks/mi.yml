@@ -1,5 +1,5 @@
 name: MI
-entrypoint: ./pupa-scrape.sh mi bills people
+entrypoint: ./pupa-scrape.sh mi
 memory_soft: 128
 cron: 0 6 * * ? *
 environment: openstates

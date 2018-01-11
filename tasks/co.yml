@@ -1,5 +1,5 @@
 name: CO
-entrypoint: ./pupa-scrape.sh co bills people committees
+entrypoint: ./pupa-scrape.sh co
 memory_soft: 128
 cron: 0 7 * * ? *
 enabled: true
