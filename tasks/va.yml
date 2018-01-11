@@ -5,4 +5,4 @@ cron: 0 5 * * ? *
 environment: openstates
 credstash: scrapers
 image: openstates/openstates
-enabled: false
+enabled: true
