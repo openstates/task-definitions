@@ -1,5 +1,5 @@
 name: KS
-entrypoint: ./pupa-scrape.sh ks --rpm 12
+entrypoint: ./pupa-scrape.sh ks
 memory_soft: 128
 cron: 1 6 * * ? *
 enabled: true
