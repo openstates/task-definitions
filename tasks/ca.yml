@@ -4,5 +4,5 @@ memory_soft: 128
 memory: 1024
 cron: 1 8 * * ? *
 environment: openstates
-credstash: scrapers
+paramstore: scrapers
 image: openstates/openstates

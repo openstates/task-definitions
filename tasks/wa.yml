@@ -3,5 +3,5 @@ entrypoint: ./pupa-scrape.sh wa
 memory_soft: 128
 cron: 0 8 * * ? *
 environment: openstates
-credstash: scrapers
+paramstore: scrapers
 image: openstates/openstates

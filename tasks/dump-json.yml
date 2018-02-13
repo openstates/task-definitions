@@ -4,5 +4,5 @@ memory_soft: 128
 cron: 0 2 1 * ? *
 enabled: false
 environment: {}
-credstash: tasks
+paramstore: tasks
 image: openstates/openstates

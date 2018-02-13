@@ -3,5 +3,5 @@ entrypoint: /opt/openstates/openstates/scripts/backup-ocd
 memory_soft: 128
 cron: 0 0 * * ? *
 environment: {}
-credstash: backups
+paramstore: backups
 image: openstates/openstates
