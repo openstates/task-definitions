@@ -1,6 +1,6 @@
 name: IL
 entrypoint: ./pupa-scrape.sh il
-memory_soft: 128
+memory: 1024
 cron: 0 6 * * ? *
 enabled: true
 environment: openstates
