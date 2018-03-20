@@ -1,6 +1,7 @@
 name: TN
 entrypoint: ./pupa-scrape.sh tn
 memory_soft: 128
+memory: 1024
 cron: 0 5 * * ? *
 environment: openstates
 paramstore: scrapers
