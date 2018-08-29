@@ -1,6 +1,6 @@
 name: PA
 entrypoint: ./pupa-scrape.sh pa
-memory_soft: 128
+memory_soft: 256
 cron: 0 5 * * ? *
 environment: openstates
 paramstore: scrapers
