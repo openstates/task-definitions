@@ -1,5 +1,5 @@
 name: KS
-entrypoint: ./pupa-scrape.sh ks
+entrypoint: ./pupa-scrape.sh ks bills
 memory_soft: 128
 cron: 1 6 * * ? *
 enabled: true

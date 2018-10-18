@@ -1,5 +1,5 @@
 name: CT
-entrypoint: ./pupa-scrape.sh ct
+entrypoint: ./pupa-scrape.sh ct bills
 memory_soft: 128
 cron: 0 5 * * ? *
 environment: openstates

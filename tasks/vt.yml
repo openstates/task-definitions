@@ -1,5 +1,5 @@
 name: VT
-entrypoint: ./pupa-scrape.sh vt
+entrypoint: ./pupa-scrape.sh vt bills
 memory_soft: 128
 cron: 0 5 * * ? *
 environment: openstates

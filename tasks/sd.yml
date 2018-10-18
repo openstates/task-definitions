@@ -1,5 +1,5 @@
 name: SD
-entrypoint: ./pupa-scrape.sh sd
+entrypoint: ./pupa-scrape.sh sd bills
 memory_soft: 128
 cron: 0 7 * * ? *
 environment: openstates

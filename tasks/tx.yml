@@ -1,5 +1,5 @@
 name: TX
-entrypoint: ./pupa-scrape.sh tx
+entrypoint: ./pupa-scrape.sh tx bills votes
 memory_soft: 128
 cron: 0 5 * * ? *
 environment: openstates

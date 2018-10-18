@@ -1,5 +1,5 @@
 name: NH
-entrypoint: ./pupa-scrape.sh nh 
+entrypoint: ./pupa-scrape.sh nh bills
 memory_soft: 128
 cron: 0 5 * * ? *
 environment: openstates

@@ -1,5 +1,5 @@
 name: AL
-entrypoint: ./pupa-scrape.sh al
+entrypoint: ./pupa-scrape.sh al bills
 memory_soft: 128
 cron: 0 5 * * ? *
 environment: openstates

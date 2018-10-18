@@ -1,5 +1,5 @@
 name: UT
-entrypoint: ./pupa-scrape.sh ut
+entrypoint: ./pupa-scrape.sh ut bills
 memory_soft: 128
 cron: 0 8 * * ? *
 environment: openstates

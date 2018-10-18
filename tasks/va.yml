@@ -1,5 +1,5 @@
 name: VA
-entrypoint: ./pupa-scrape.sh va
+entrypoint: ./pupa-scrape.sh va bills
 memory_soft: 128
 cron: 0 5 * * ? *
 environment: openstates

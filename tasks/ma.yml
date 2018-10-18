@@ -1,5 +1,5 @@
 name: MA
-entrypoint: ./pupa-scrape.sh ma 
+entrypoint: ./pupa-scrape.sh ma  bills
 memory_soft: 128
 cron: 0 5 * * ? *
 enabled: true

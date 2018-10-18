@@ -1,5 +1,5 @@
 name: NE
-entrypoint: ./pupa-scrape.sh ne
+entrypoint: ./pupa-scrape.sh ne bills votes
 memory_soft: 128
 cron: 0 7 * * ? *
 environment: openstates

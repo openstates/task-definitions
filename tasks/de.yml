@@ -1,5 +1,5 @@
 name: DE
-entrypoint: ./pupa-scrape.sh de
+entrypoint: ./pupa-scrape.sh de bills
 memory_soft: 128
 memory: 1024
 cron: 0 5 * * ? *

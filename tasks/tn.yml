@@ -1,5 +1,5 @@
 name: TN
-entrypoint: ./pupa-scrape.sh tn
+entrypoint: ./pupa-scrape.sh tn bills
 memory_soft: 128
 memory: 1024
 cron: 0 5 * * ? *

@@ -1,5 +1,5 @@
 name: PR
-entrypoint: ./pupa-scrape.sh pr 
+entrypoint: ./pupa-scrape.sh pr  bills
 memory_soft: 128
 cron: 0 4 * * ? *
 environment: openstates

@@ -1,5 +1,5 @@
 name: AZ
-entrypoint: ./pupa-scrape.sh az
+entrypoint: ./pupa-scrape.sh az bills
 memory_soft: 128
 cron: 0 7 * * ? *
 enabled: true

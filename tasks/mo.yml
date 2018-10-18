@@ -1,5 +1,5 @@
 name: MO
-entrypoint: ./pupa-scrape.sh mo
+entrypoint: ./pupa-scrape.sh mo bills
 memory_soft: 128
 cron: 0 6 * * ? *
 enabled: true

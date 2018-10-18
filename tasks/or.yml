@@ -1,5 +1,5 @@
 name: OR
-entrypoint: ./pupa-scrape.sh or
+entrypoint: ./pupa-scrape.sh or bills votes
 memory_soft: 128
 cron: 0 8 * * ? *
 environment: openstates

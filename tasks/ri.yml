@@ -1,5 +1,5 @@
 name: RI
-entrypoint: ./pupa-scrape.sh ri
+entrypoint: ./pupa-scrape.sh ri bills
 memory_soft: 128
 cron: 0 5 * * ? *
 enabled: true
