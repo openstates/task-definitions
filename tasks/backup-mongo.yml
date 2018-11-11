@@ -5,3 +5,4 @@ cron: 0 0 * * ? *
 environment: {}
 paramstore: backups
 image: openstates/openstates
+enabled: false
