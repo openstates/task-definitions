@@ -1,6 +1,7 @@
 language: python
 sudo: false
 python: 3.6
+cache: pip
 install: pip install bobsled==0.6
 notifications:
   email:
