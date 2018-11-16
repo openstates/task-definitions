@@ -1,5 +1,5 @@
 name: Backup-OCD
-entrypoint: /opt/openstates/openstates/scripts/backup-ocd
+entrypoint: /opt/openstates/openstates/scripts/backup
 memory_soft: 128
 cron: 0 0 * * ? *
 environment: {}
