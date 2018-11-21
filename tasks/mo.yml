@@ -2,7 +2,7 @@ name: MO
 entrypoint: ./pupa-scrape.sh mo bills
 memory_soft: 128
 cron: 0 6 * * ? *
-enabled: true
+enabled: false
 environment: openstates
 paramstore: scrapers
 image: openstates/openstates

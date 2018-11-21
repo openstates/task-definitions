@@ -4,5 +4,5 @@ memory_soft: 128
 cron: 0 4 * * ? *
 environment: openstates
 paramstore: scrapers
-enabled: true
+enabled: false
 image: openstates/openstates

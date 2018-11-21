@@ -2,7 +2,7 @@ name: LA
 entrypoint: ./pupa-scrape.sh la bills
 memory_soft: 128
 cron: 0 6 * * ? *
-enabled: true
+enabled: false
 environment: openstates
 paramstore: scrapers
 image: openstates/openstates

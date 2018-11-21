@@ -2,7 +2,7 @@ name: RI
 entrypoint: ./pupa-scrape.sh ri bills
 memory_soft: 128
 cron: 0 5 * * ? *
-enabled: true
+enabled: false
 environment: openstates
 paramstore: scrapers
 image: openstates/openstates
