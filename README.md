@@ -1,3 +1,4 @@
 # Task definitions for Open States
 
-See https://github.com/openstates/bobsled/
+[![Build Status](https://travis-ci.org/openstates/task-definitions.svg?branch=master)](https://travis-ci.org/openstates/task-definitions)
+
