@@ -1,0 +1,7 @@
+name: Update-People
+entrypoint: /opt/openstates/openstates/scripts/update-people.sh
+memory_soft: 128
+cron: 0 0 * * ? *
+environment: openstates
+paramstore: scrapers
+image: openstates/openstates
