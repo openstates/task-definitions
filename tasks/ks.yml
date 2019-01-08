@@ -2,7 +2,7 @@ name: KS
 entrypoint: ./pupa-scrape.sh ks bills
 memory_soft: 128
 cron: 1 6 * * ? *
-enabled: false
+enabled: true
 environment: openstates
 paramstore: scrapers
 image: openstates/openstates
