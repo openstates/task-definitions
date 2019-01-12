@@ -5,4 +5,4 @@ cron: 0 8 * * ? *
 environment: openstates
 paramstore: scrapers
 image: openstates/openstates
-enabled: false
+enabled: true
