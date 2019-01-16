@@ -1,5 +1,5 @@
 name: NM
-entrypoint: ./pupa-scrape.sh nm bills votes
+entrypoint: ./pupa-scrape.sh nm bills # votes
 memory_soft: 128
 cron: 0 7 * * ? *
 environment: openstates
