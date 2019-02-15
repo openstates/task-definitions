@@ -1,7 +1,8 @@
 name: CA
 entrypoint: [sh, -c, "mysql_install_db --user=mysql && mysqld_safe --max_allowed_packet=512M & sleep 10 && /opt/openstates/venv-pupa/bin/python /opt/openstates/openstates/openstates/ca/download.py && ./pupa-scrape.sh ca bills"]
+cpu: 512
 memory_soft: 128
-memory: 2048
+memory: 4096
 cron: 1 */12 * * ? *
 environment: openstates
 paramstore: scrapers
