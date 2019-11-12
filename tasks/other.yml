@@ -1,13 +1,13 @@
 update-people:
-  image: openstates/openstates
-  entrypoint: "/opt/openstates/openstates/scripts/update-people.sh"
+  image: openstates/people
+  entrypoint: "scripts/to_database.py"
   enabled: true
   environment: scrapers
   triggers:
     - cron: 0 0 * * ?
 backup:
-  image: openstates/openstates
-  entrypoint: "/opt/openstates/openstates/scripts/backup"
+  image: openstates/tasks
+  entrypoint: "./backup"
   enabled: true
   environment: backups
   triggers:
