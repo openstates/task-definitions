@@ -1,8 +1,7 @@
-name: WA
-entrypoint: ./pupa-scrape.sh wa bills
-memory_soft: 128
-cron: 0 8 * * ? *
-environment: openstates
-paramstore: scrapers
-image: openstates/openstates
-enabled: true
+WA-scrape:
+  image: openstates/openstates
+  entrypoint: "./pupa-scrape.sh wa bills"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 0 8 * * ?

@@ -1,8 +1,7 @@
-name: SC
-entrypoint: ./pupa-scrape.sh sc bills
-memory_soft: 128
-cron: 0 4 * * ? *
-environment: openstates
-paramstore: scrapers
-image: openstates/openstates
-enabled: true
+SC-scrape:
+  image: openstates/openstates
+  entrypoint: "./pupa-scrape.sh sc bills"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 0 4 * * ?

@@ -1,8 +1,8 @@
-name: IL
-entrypoint: ./pupa-scrape.sh il bills
-memory: 1024
-cron: 0 6 * * ? *
-enabled: true
-environment: openstates
-paramstore: scrapers
-image: openstates/openstates
+IL-scrape:
+  image: openstates/openstates
+  entrypoint: "./pupa-scrape.sh il bills"
+  enabled: true
+  environment: scrapers
+  memory: 1024
+  triggers:
+    - cron: 0 6 * * ?

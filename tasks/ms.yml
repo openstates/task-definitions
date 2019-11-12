@@ -1,8 +1,7 @@
-name: MS
-entrypoint: ./pupa-scrape.sh ms bills
-memory_soft: 128
-cron: 0 6 * * ? *
-environment: openstates
-paramstore: scrapers
-image: openstates/openstates
-enabled: true
+MS-scrape:
+  image: openstates/openstates
+  entrypoint: "./pupa-scrape.sh ms bills"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 0 6 * * ?

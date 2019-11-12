@@ -1,8 +1,7 @@
-name: NC
-entrypoint: ./pupa-scrape.sh nc bills
-memory_soft: 128
-cron: 0 4 * * ? *
-environment: openstates
-paramstore: scrapers
-enabled: true
-image: openstates/openstates
+NC-scrape:
+  image: openstates/openstates
+  entrypoint: "./pupa-scrape.sh nc bills"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 0 4 * * ?

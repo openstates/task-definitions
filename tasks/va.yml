@@ -1,8 +1,7 @@
-name: VA
-entrypoint: ./pupa-scrape.sh va bills
-memory_soft: 128
-cron: 0 5 * * ? *
-environment: openstates
-paramstore: scrapers
-image: openstates/openstates
-enabled: true
+VA-scrape:
+  image: openstates/openstates
+  entrypoint: "./pupa-scrape.sh va bills"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 0 5 * * ?

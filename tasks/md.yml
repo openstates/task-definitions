@@ -1,8 +1,7 @@
-name: MD
-entrypoint: ./pupa-scrape.sh md bills
-memory_soft: 128
-cron: 0 4 * * ? *
-environment: openstates
-paramstore: scrapers
-image: openstates/openstates
-enabled: true
+MD-scrape:
+  image: openstates/openstates
+  entrypoint: "./pupa-scrape.sh md bills"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 0 4 * * ?

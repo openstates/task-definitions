@@ -1,8 +1,7 @@
-name: WV
-entrypoint: ./pupa-scrape.sh wv bills
-memory_soft: 128
-cron: 0 5 * * ? *
-enabled: true
-environment: openstates
-paramstore: scrapers
-image: openstates/openstates
+WV-scrape:
+  image: openstates/openstates
+  entrypoint: "./pupa-scrape.sh wv bills"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 0 5 * * ?

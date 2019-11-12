@@ -1,8 +1,7 @@
-name: NJ
-entrypoint: ./pupa-scrape.sh nj bills
-memory_soft: 128
-cron: 0 4 * * ? *
-environment: openstates
-paramstore: scrapers
-image: openstates/openstates
-enabled: true
+NJ-scrape:
+  image: openstates/openstates
+  entrypoint: "./pupa-scrape.sh nj bills"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 0 4 * * ?

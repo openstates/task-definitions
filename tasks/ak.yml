@@ -1,8 +1,7 @@
-name: AK
-entrypoint: ./pupa-scrape.sh ak bills
-memory_soft: 128
-cron: 0 8 * * ? *
-environment: openstates
-paramstore: scrapers
-image: openstates/openstates
-enabled: false
+AK-scrape:
+  image: openstates/openstates
+  entrypoint: "./pupa-scrape.sh ak bills"
+  enabled: false
+  environment: scrapers
+  triggers:
+    - cron: 0 8 * * ?

@@ -1,9 +1,8 @@
-name: PA
-entrypoint: ./pupa-scrape.sh pa bills
-memory_soft: 256
-memory: 1024
-cron: 0 5 * * ? *
-environment: openstates
-paramstore: scrapers
-image: openstates/openstates
-enabled: true
+PA-scrape:
+  image: openstates/openstates
+  entrypoint: "./pupa-scrape.sh pa bills"
+  enabled: true
+  memory: 1024
+  environment: scrapers
+  triggers:
+    - cron: 0 5 * * ?

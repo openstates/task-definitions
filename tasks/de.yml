@@ -1,9 +1,8 @@
-name: DE
-entrypoint: ./pupa-scrape.sh de bills
-memory_soft: 128
-memory: 1024
-cron: 0 5 * * ? *
-enabled: true
-environment: openstates
-paramstore: scrapers
-image: openstates/openstates
+DE-scrape:
+  image: openstates/openstates
+  entrypoint: "./pupa-scrape.sh de bills"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 0 5 * * ?
+  memory: 1024

@@ -1,8 +1,7 @@
-name: FL
-entrypoint: ./pupa-scrape.sh fl bills
-memory_soft: 128
-cron: 0 4 * * ? *
-environment: openstates
-paramstore: scrapers
-image: openstates/openstates
-enabled: true
+FL-scrape:
+  image: openstates/openstates
+  entrypoint: "./pupa-scrape.sh fl bills"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 0 5 * * ?

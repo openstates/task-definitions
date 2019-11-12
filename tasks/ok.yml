@@ -1,8 +1,7 @@
-name: OK
-entrypoint: ./pupa-scrape.sh ok bills
-memory_soft: 128
-enabled: true
-cron: 1 6 * * ? *
-environment: openstates
-paramstore: scrapers
-image: openstates/openstates
+OK-scrape:
+  image: openstates/openstates
+  entrypoint: "./pupa-scrape.sh ok bills"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 0 6 * * ?

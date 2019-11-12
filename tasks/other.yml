@@ -1,0 +1,14 @@
+update-people:
+  image: openstates/openstates
+  entrypoint: "/opt/openstates/openstates/scripts/update-people.sh"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 0 0 * * ?
+backup:
+  image: openstates/openstates
+  entrypoint: "/opt/openstates/openstates/scripts/backup"
+  enabled: true
+  environment: backups
+  triggers:
+    - cron: 0 0 * * ?

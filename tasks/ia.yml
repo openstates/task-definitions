@@ -1,8 +1,7 @@
-name: IA
-entrypoint: ./pupa-scrape.sh ia bills votes
-memory_soft: 128
-cron: 1 6 * * ? *
-enabled: true
-environment: openstates
-paramstore: scrapers
-image: openstates/openstates
+IA-scrape:
+  image: openstates/openstates
+  entrypoint: "./pupa-scrape.sh ia bills"  # votes
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 0 6 * * ?

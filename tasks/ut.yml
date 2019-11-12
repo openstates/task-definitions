@@ -1,8 +1,7 @@
-name: UT
-entrypoint: ./pupa-scrape.sh ut bills
-memory_soft: 128
-cron: 0 8 * * ? *
-environment: openstates
-paramstore: scrapers
-image: openstates/openstates
-enabled: true
+UT-scrape:
+  image: openstates/openstates
+  entrypoint: "./pupa-scrape.sh ut bills"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 0 8 * * ?

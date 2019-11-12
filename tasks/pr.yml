@@ -1,8 +1,7 @@
-name: PR
-entrypoint: ./pupa-scrape.sh pr  bills
-memory_soft: 128
-cron: 0 4 * * ? *
-environment: openstates
-paramstore: scrapers
-image: openstates/openstates
-enabled: false
+PR-scrape:
+  image: openstates/openstates
+  entrypoint: "./pupa-scrape.sh pr bills"
+  enabled: false
+  environment: scrapers
+  triggers:
+    - cron: 0 4 * * ?

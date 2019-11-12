@@ -1,8 +1,7 @@
-name: NM
-entrypoint: ./pupa-scrape.sh nm bills votes
-memory_soft: 128
-cron: 0 7 * * ? *
-environment: openstates
-paramstore: scrapers
-image: openstates/openstates
-enabled: true
+NM-scrape:
+  image: openstates/openstates
+  entrypoint: "./pupa-scrape.sh nm bills"  # votes
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 0 7 * * ?

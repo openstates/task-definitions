@@ -1,8 +1,7 @@
-name: MI
-entrypoint: ./pupa-scrape.sh mi bills
-memory_soft: 128
-cron: 0 6 * * ? *
-environment: openstates
-paramstore: scrapers
-image: openstates/openstates
-enabled: true
+MI-scrape:
+  image: openstates/openstates
+  entrypoint: "./pupa-scrape.sh mi bills"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 0 6 * * ?

@@ -1,9 +1,8 @@
-name: TN
-entrypoint: ./pupa-scrape.sh tn bills
-memory_soft: 128
-memory: 1024
-cron: 0 5 * * ? *
-environment: openstates
-paramstore: scrapers
-image: openstates/openstates
-enabled: true
+TN-scrape:
+  image: openstates/openstates
+  entrypoint: "./pupa-scrape.sh tn bills"
+  enabled: true
+  memory: 1024
+  environment: scrapers
+  triggers:
+    - cron: 0 5 * * ?

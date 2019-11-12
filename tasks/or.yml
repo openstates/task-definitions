@@ -1,8 +1,7 @@
-name: OR
-entrypoint: ./pupa-scrape.sh or bills votes
-memory_soft: 128
-cron: 0 8 * * ? *
-environment: openstates
-paramstore: scrapers
-image: openstates/openstates
-enabled: true
+OR-scrape:
+  image: openstates/openstates
+  entrypoint: "./pupa-scrape.sh or bills votes"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 0 8 * * ?

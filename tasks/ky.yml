@@ -1,8 +1,7 @@
-name: KY
-entrypoint: ./pupa-scrape.sh ky bills
-memory_soft: 128
-cron: 0 6 * * ? *
-enabled: true
-environment: openstates
-paramstore: scrapers
-image: openstates/openstates
+KY-scrape:
+  image: openstates/openstates
+  entrypoint: "./pupa-scrape.sh ky bills"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 0 6 * * ?

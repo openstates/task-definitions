@@ -1,8 +1,7 @@
-name: MT
-entrypoint: ./pupa-scrape.sh mt bills
-memory_soft: 128
-cron: 0 7 * * ? *
-enabled: true
-environment: openstates
-paramstore: scrapers
-image: openstates/openstates
+MT-scrape:
+  image: openstates/openstates
+  entrypoint: "./pupa-scrape.sh mt bills"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 0 7 * * ?

@@ -1,8 +1,7 @@
-name: DC
-entrypoint: ./pupa-scrape.sh dc bills
-memory_soft: 128
-cron: 0 5 * * ? *
-environment: openstates
-paramstore: scrapers
-image: openstates/openstates
-enabled: true
+DC-scrape:
+  image: openstates/openstates
+  entrypoint: "./pupa-scrape.sh dc bills"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 0 5 * * ?

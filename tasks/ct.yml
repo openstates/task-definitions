@@ -1,8 +1,7 @@
-name: CT
-entrypoint: ./pupa-scrape.sh ct bills
-memory_soft: 128
-cron: 0 5 * * ? *
-environment: openstates
-paramstore: scrapers
-image: openstates/openstates
-enabled: true
+CT-scrape:
+  image: openstates/openstates
+  entrypoint: "./pupa-scrape.sh ct bills"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 0 5 * * ?
