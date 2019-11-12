@@ -1,9 +1,9 @@
-# CA-scrape:
-#   image: openstates/openstates
-#   entrypoint: [sh, -c, 'mysql_install_db --user=root && mkdir /run/mysqld && mysqld --user root --datadir=/opt/openstates/openstates/data --max_allowed_packet=512M & /opt/openstates/openstates/openstates/ca/download.sh && ./pupa-scrape.sh ca bills']
-#   enabled: true
-#   environment: scrapers
-#   triggers:
-#     - cron: 0 0,12 * * ?
-#   memory: 4096
-#   cpu: 512
+CA-scrape:
+  image: openstates/openstates
+  entrypoint: "echo 'tbd'" # [sh, -c, 'mysql_install_db --user=root && mkdir /run/mysqld && mysqld --user root --datadir=/opt/openstates/openstates/data --max_allowed_packet=512M & /opt/openstates/openstates/openstates/ca/download.sh && ./pupa-scrape.sh ca bills']
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 0 0,12 * * ?
+  memory: 4096
+  cpu: 512
