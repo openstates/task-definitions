@@ -5,7 +5,7 @@ RUN apt update && apt install -y --no-install-recommends \
       git \
       postgresql-client \ 
       awscli \
-      rm -rf /var/lib/apt/lists/*
+      && rm -rf /var/lib/apt/lists/*
 
 ADD ./scripts /opt/scripts
 WORKDIR /opt/scripts/
