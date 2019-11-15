@@ -1,8 +1,8 @@
 update-people:
   image: openstates/people
-  entrypoint: "scripts/to_database.py"
+  entrypoint: "./scripts/lint_yaml.py az"
   enabled: true
-  environment: scrapers
+  environment: backups
   triggers:
     - cron: 0 0 * * ?
 backup:
