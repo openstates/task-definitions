@@ -1,6 +1,6 @@
 update-people:
   image: openstates/people:latest
-  entrypoint: "./scripts/lint_yaml.py az"
+  entrypoint: "poetry run ./scripts/to_database.py"
   enabled: true
   environment: backups
   triggers:
