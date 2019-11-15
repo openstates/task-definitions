@@ -1,5 +1,5 @@
 update-people:
-  image: openstates/people
+  image: openstates/people:latest
   entrypoint: "./scripts/lint_yaml.py az"
   enabled: true
   environment: backups
