@@ -12,3 +12,10 @@ backup:
   environment: backups
   triggers:
     - cron: 0 0 * * ?
+backup:
+  image: openstates/text-extraction
+  entrypoint: "poetry run ./text_extract.py update all"
+  enabled: true
+  environment: backups
+  triggers:
+    - cron: 0 12 * * ?
