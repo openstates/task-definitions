@@ -1,6 +1,6 @@
 AL-scrape:
   image: openstates/openstates
-  entrypoint: "./pupa-scrape.sh al bills"
+  entrypoint: "poetry run pupa update al bills"
   enabled: true
   environment: scrapers
   triggers:

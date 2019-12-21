@@ -1,6 +1,6 @@
 KS-scrape:
   image: openstates/openstates
-  entrypoint: "./pupa-scrape.sh ks bills"
+  entrypoint: "poetry run pupa update ks bills"
   enabled: true
   environment: scrapers
   triggers:

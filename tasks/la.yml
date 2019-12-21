@@ -1,6 +1,6 @@
 LA-scrape:
   image: openstates/openstates
-  entrypoint: "./pupa-scrape.sh la bills"
+  entrypoint: "poetry run pupa update la bills"
   enabled: true
   environment: scrapers
   triggers:

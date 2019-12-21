@@ -1,6 +1,6 @@
 KY-scrape:
   image: openstates/openstates
-  entrypoint: "./pupa-scrape.sh ky bills"
+  entrypoint: "poetry run pupa update ky bills"
   enabled: true
   environment: scrapers
   triggers:

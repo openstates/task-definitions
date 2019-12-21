@@ -1,6 +1,6 @@
 DE-scrape:
   image: openstates/openstates
-  entrypoint: "./pupa-scrape.sh de bills"
+  entrypoint: "poetry run pupa update de bills"
   enabled: true
   environment: scrapers
   triggers:

@@ -1,6 +1,6 @@
 NJ-scrape:
   image: openstates/openstates
-  entrypoint: "./pupa-scrape.sh nj bills"
+  entrypoint: "poetry run pupa update nj bills"
   enabled: true
   environment: scrapers
   triggers:

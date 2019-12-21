@@ -1,6 +1,6 @@
 ND-scrape:
   image: openstates/openstates
-  entrypoint: "./pupa-scrape.sh nd bills" # votes
+  entrypoint: "poetry run pupa update nd bills" # votes
   enabled: true
   environment: scrapers
   triggers:

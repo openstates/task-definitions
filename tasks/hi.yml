@@ -1,6 +1,6 @@
 HI-scrape:
   image: openstates/openstates
-  entrypoint: "./pupa-scrape.sh hi bills"
+  entrypoint: "poetry run pupa update hi bills"
   enabled: true
   environment: scrapers
   triggers:

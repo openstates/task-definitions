@@ -1,6 +1,6 @@
 VT-scrape:
   image: openstates/openstates
-  entrypoint: "./pupa-scrape.sh vt bills"
+  entrypoint: "poetry run pupa update vt bills"
   enabled: true
   environment: scrapers
   triggers:

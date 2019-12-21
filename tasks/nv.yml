@@ -1,6 +1,6 @@
 NV-scrape:
   image: openstates/openstates
-  entrypoint: "./pupa-scrape.sh nv bills"
+  entrypoint: "poetry run pupa update nv bills"
   enabled: true
   environment: scrapers
   triggers:

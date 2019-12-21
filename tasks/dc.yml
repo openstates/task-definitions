@@ -1,6 +1,6 @@
 DC-scrape:
   image: openstates/openstates
-  entrypoint: "./pupa-scrape.sh dc bills"
+  entrypoint: "poetry run pupa update dc bills"
   enabled: true
   environment: scrapers
   triggers:

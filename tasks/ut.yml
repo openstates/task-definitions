@@ -1,6 +1,6 @@
 UT-scrape:
   image: openstates/openstates
-  entrypoint: "./pupa-scrape.sh ut bills"
+  entrypoint: "poetry run pupa update ut bills"
   enabled: true
   environment: scrapers
   triggers:

@@ -1,6 +1,6 @@
 SD-scrape:
   image: openstates/openstates
-  entrypoint: "./pupa-scrape.sh sd bills"
+  entrypoint: "poetry run pupa update sd bills"
   enabled: true
   environment: scrapers
   triggers:

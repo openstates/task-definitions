@@ -1,6 +1,6 @@
 IL-scrape:
   image: openstates/openstates
-  entrypoint: "./pupa-scrape.sh il bills"
+  entrypoint: "poetry run pupa update il bills"
   enabled: true
   environment: scrapers
   memory: 1024
