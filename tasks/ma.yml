@@ -1,5 +1,5 @@
 MA-scrape:
-  image: openstates/openstates
+  image: openstates/openstates:black
   entrypoint: "poetry run pupa update ma bills"
   enabled: true
   environment: scrapers

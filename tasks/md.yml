@@ -1,5 +1,5 @@
 MD-scrape:
-  image: openstates/openstates
+  image: openstates/openstates:black
   entrypoint: "poetry run pupa update md bills"
   enabled: true
   environment: scrapers

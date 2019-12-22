@@ -1,5 +1,5 @@
 SC-scrape:
-  image: openstates/openstates
+  image: openstates/openstates:black
   entrypoint: "poetry run pupa update sc bills"
   enabled: true
   environment: scrapers
