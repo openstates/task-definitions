@@ -1,5 +1,5 @@
 NY-scrape:
-  image: openstates/openstates:black
+  image: openstates/openstates
   entrypoint: "poetry run pupa update ny bills"
   enabled: true
   environment: scrapers

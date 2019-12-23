@@ -1,5 +1,5 @@
 WY-scrape:
-  image: openstates/openstates:black
+  image: openstates/openstates
   entrypoint: "poetry run pupa update wy bills"
   enabled: true
   environment: scrapers

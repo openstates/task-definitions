@@ -1,5 +1,5 @@
 ID-scrape:
-  image: openstates/openstates:black
+  image: openstates/openstates
   entrypoint: "poetry run pupa update id bills"
   enabled: true
   environment: scrapers

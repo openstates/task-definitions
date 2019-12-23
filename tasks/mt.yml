@@ -1,5 +1,5 @@
 MT-scrape:
-  image: openstates/openstates:black
+  image: openstates/openstates
   entrypoint: "poetry run pupa update mt bills"
   enabled: true
   environment: scrapers

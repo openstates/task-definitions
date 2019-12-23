@@ -1,5 +1,5 @@
 CT-scrape:
-  image: openstates/openstates:black
+  image: openstates/openstates
   entrypoint: "poetry run pupa update ct bills"
   enabled: true
   environment: scrapers

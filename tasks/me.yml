@@ -1,5 +1,5 @@
 ME-scrape:
-  image: openstates/openstates:black
+  image: openstates/openstates
   entrypoint: "poetry run pupa update me bills"
   enabled: true
   environment: scrapers

@@ -1,5 +1,5 @@
 WA-scrape:
-  image: openstates/openstates:black
+  image: openstates/openstates
   entrypoint: "poetry run pupa update wa bills"
   enabled: true
   environment: scrapers

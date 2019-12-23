@@ -1,5 +1,5 @@
 IN-scrape:
-  image: openstates/openstates:black
+  image: openstates/openstates
   entrypoint: "poetry run pupa update in bills"
   enabled: true
   environment: scrapers
