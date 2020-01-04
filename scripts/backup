@@ -9,6 +9,7 @@ pg_dump -Fc openstatesorg \
   --exclude-table-data 'auth*' \
   --exclude-table-data 'boundaries*' \
   --exclude-table-data 'django_admin*' \
+  --exclude-table-data 'django_session' \
   --exclude-table-data "geo*" \
   --exclude-table-data "account*" \
   --exclude-table-data "socialaccount*" \
