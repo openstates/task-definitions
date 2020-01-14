@@ -1,7 +1,7 @@
 AK-scrape:
   image: openstates/openstates
   entrypoint: "poetry run pupa update ak bills"
-  enabled: false
+  enabled: true
   environment: scrapers
   triggers:
     - cron: 0 8 * * ?
