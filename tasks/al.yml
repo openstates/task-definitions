@@ -5,3 +5,9 @@ AL-scrape:
   environment: scrapers
   triggers:
     - cron: 0 5 * * ?
+
+AL-text:
+  image: openstates/text-extract
+  entrypoint: "poetry run ./text_extract.py update al"
+  enabled: true
+  environment: scrapers
