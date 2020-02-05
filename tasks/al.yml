@@ -5,6 +5,8 @@ AL-scrape:
   environment: scrapers
   triggers:
     - cron: 0 5 * * ?
+  next_tasks:
+    - AL-text
 
 AL-text:
   image: openstates/text-extract
