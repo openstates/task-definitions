@@ -1,6 +1,6 @@
 MD-scrape:
   image: openstates/openstates
-  entrypoint: "poetry run pupa update md bills"
+  entrypoint: "poetry run pupa update md bills votes"
   enabled: true
   environment: scrapers
   triggers:
