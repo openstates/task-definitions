@@ -5,3 +5,11 @@ RI-scrape:
   environment: scrapers
   triggers:
     - cron: 0 5 * * ?
+  next_tasks:
+    - RI-text
+
+RI-text:
+  image: openstates/text-extraction
+  entrypoint: "poetry run ./text_extract.py update ri"
+  enabled: true
+  environment: scrapers

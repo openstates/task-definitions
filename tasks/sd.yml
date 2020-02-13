@@ -5,3 +5,11 @@ SD-scrape:
   environment: scrapers
   triggers:
     - cron: 0 7 * * ?
+  next_tasks:
+    - SD-text
+
+SD-text:
+  image: openstates/text-extraction
+  entrypoint: "poetry run ./text_extract.py update sd"
+  enabled: true
+  environment: scrapers

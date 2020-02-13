@@ -7,3 +7,11 @@ CA-scrape:
     - cron: 0 0,12 * * ?
   memory: 4096
   cpu: 512
+  next_tasks:
+    - CA-text
+
+CA-text:
+  image: openstates/text-extraction
+  entrypoint: "poetry run ./text_extract.py update ca"
+  enabled: true
+  environment: scrapers

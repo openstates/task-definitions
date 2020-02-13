@@ -5,3 +5,11 @@ MT-scrape:
   environment: scrapers
   triggers:
     - cron: 0 7 * * ?
+  next_tasks:
+    - MT-text
+
+MT-text:
+  image: openstates/text-extraction
+  entrypoint: "poetry run ./text_extract.py update mt"
+  enabled: true
+  environment: scrapers

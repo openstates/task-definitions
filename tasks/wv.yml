@@ -5,3 +5,11 @@ WV-scrape:
   environment: scrapers
   triggers:
     - cron: 0 5 * * ?
+  next_tasks:
+    - WV-text
+
+WV-text:
+  image: openstates/text-extraction
+  entrypoint: "poetry run ./text_extract.py update wv"
+  enabled: true
+  environment: scrapers

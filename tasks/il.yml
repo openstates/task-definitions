@@ -6,3 +6,11 @@ IL-scrape:
   memory: 1024
   triggers:
     - cron: 0 6 * * ?
+  next_tasks:
+    - IL-text
+
+IL-text:
+  image: openstates/text-extraction
+  entrypoint: "poetry run ./text_extract.py update il"
+  enabled: true
+  environment: scrapers

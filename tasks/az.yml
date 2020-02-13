@@ -5,3 +5,11 @@ AZ-scrape:
   environment: scrapers
   triggers:
     - cron: 0 7 * * ?
+  next_tasks:
+    - AZ-text
+
+AZ-text:
+  image: openstates/text-extraction
+  entrypoint: "poetry run ./text_extract.py update az"
+  enabled: true
+  environment: scrapers

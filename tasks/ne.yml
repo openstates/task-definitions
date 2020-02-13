@@ -5,3 +5,11 @@ NE-scrape:
   environment: scrapers
   triggers:
     - cron: 0 7 * * ?
+  next_tasks:
+    - NE-text
+
+NE-text:
+  image: openstates/text-extraction
+  entrypoint: "poetry run ./text_extract.py update ne"
+  enabled: true
+  environment: scrapers

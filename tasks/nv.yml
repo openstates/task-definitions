@@ -5,3 +5,11 @@ NV-scrape:
   environment: scrapers
   triggers:
     - cron: 0 8 * * ?
+  next_tasks:
+    - NV-text
+
+NV-text:
+  image: openstates/text-extraction
+  entrypoint: "poetry run ./text_extract.py update nv"
+  enabled: true
+  environment: scrapers

@@ -5,3 +5,11 @@ OK-scrape:
   environment: scrapers
   triggers:
     - cron: 0 6 * * ?
+  next_tasks:
+    - OK-text
+
+OK-text:
+  image: openstates/text-extraction
+  entrypoint: "poetry run ./text_extract.py update ok"
+  enabled: true
+  environment: scrapers

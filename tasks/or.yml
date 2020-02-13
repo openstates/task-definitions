@@ -5,3 +5,11 @@ OR-scrape:
   environment: scrapers
   triggers:
     - cron: 0 8 * * ?
+  next_tasks:
+    - OR-text
+
+OR-text:
+  image: openstates/text-extraction
+  entrypoint: "poetry run ./text_extract.py update or"
+  enabled: true
+  environment: scrapers

@@ -5,3 +5,11 @@ IN-scrape:
   environment: scrapers
   triggers:
     - cron: 0 6 * * ?
+  next_tasks:
+    - IN-text
+
+IN-text:
+  image: openstates/text-extraction
+  entrypoint: "poetry run ./text_extract.py update in"
+  enabled: true
+  environment: scrapers

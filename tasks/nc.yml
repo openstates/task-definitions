@@ -5,3 +5,11 @@ NC-scrape:
   environment: scrapers
   triggers:
     - cron: 0 4 * * ?
+  next_tasks:
+    - NC-text
+
+NC-text:
+  image: openstates/text-extraction
+  entrypoint: "poetry run ./text_extract.py update nc"
+  enabled: true
+  environment: scrapers

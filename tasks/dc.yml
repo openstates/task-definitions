@@ -5,3 +5,11 @@ DC-scrape:
   environment: scrapers
   triggers:
     - cron: 0 5 * * ?
+  next_tasks:
+    - DC-text
+
+DC-text:
+  image: openstates/text-extraction
+  entrypoint: "poetry run ./text_extract.py update dc"
+  enabled: true
+  environment: scrapers
