@@ -5,6 +5,13 @@ update-people:
   environment: backups
   triggers:
     - cron: 0 0 * * ?
+people-csv:
+  image: openstates/people:latest
+  entrypoint: "poetry run ./scripts/to_csv.py --upload"
+  enabled: true
+  environment: backups
+  triggers:
+    - cron: 0 0 * * ?
 backup:
   image: openstates/tasks
   entrypoint: "./backup"
