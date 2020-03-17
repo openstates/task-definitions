@@ -19,3 +19,8 @@ backup:
   environment: backups
   triggers:
     - cron: 0 0 * * ?
+csv-export:
+  image: openstates/openstates.org
+  environment: backups
+  enabled: true
+  entrypoint: "bulk_export ca --all --format csv"
