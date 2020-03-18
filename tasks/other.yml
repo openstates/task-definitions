@@ -24,3 +24,5 @@ csv-export:
   environment: scrapers
   enabled: true
   entrypoint: "poetry run ./manage.py bulk_export ca --all --format csv"
+  memory: 4096
+  cpu: 512
