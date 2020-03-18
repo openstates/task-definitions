@@ -23,4 +23,4 @@ csv-export:
   image: openstates/openstates.org
   environment: backups
   enabled: true
-  entrypoint: "bulk_export ca --all --format csv"
+  entrypoint: "poetry run ./manage.py bulk_export ca --all --format csv"
