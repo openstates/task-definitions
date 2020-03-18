@@ -21,6 +21,6 @@ backup:
     - cron: 0 0 * * ?
 csv-export:
   image: openstates/openstates.org
-  environment: backups
+  environment: scrapers
   enabled: true
   entrypoint: "poetry run ./manage.py bulk_export ca --all --format csv"
