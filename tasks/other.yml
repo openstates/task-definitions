@@ -20,7 +20,7 @@ backup:
   triggers:
     - cron: 0 0 * * ?
 csv-export:
-  image: openstates/openstates.org
+  image: openstates/openstates.org:django-dev
   environment: scrapers
   enabled: true
   memory: 1024
