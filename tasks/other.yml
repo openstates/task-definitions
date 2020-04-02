@@ -23,8 +23,9 @@ csv-export:
   image: openstates/openstates.org:django-dev
   environment: scrapers
   enabled: true
-  memory: 1024
-  entrypoint: "poetry run ./manage.py bulk_export all --all --format csv"
+  memory: 4096
+  cpu: 512
+  entrypoint: "poetry run ./manage.py bulk_export all --format csv"
   triggers:
     # first of the month
     - cron: 0 0 1 * ?
