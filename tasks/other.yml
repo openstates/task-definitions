@@ -25,7 +25,7 @@ csv-export:
   enabled: true
   memory: 4096
   cpu: 512
-  entrypoint: "poetry run ./manage.py bulk_export or pa pr ri sc sd tn tx ut vt va wa wi wy --format csv"
+  entrypoint: "poetry run ./manage.py bulk_export or pa pr ri sc sd tn tx ut vt va wa wi wy --format csv --all-sessions"
   triggers:
     # first of the month
     - cron: 0 0 1 * ?
