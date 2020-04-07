@@ -43,4 +43,4 @@ web-update-materialized-views:
   enabled: true
   entrypoint: ['poetry', 'run', './manage.py', 'update_materialized_views']
   triggers:
-    - cron: 0 */2 * * ?
+    - cron: 0 0,2,4,6,8,10,12,14,16,18,20,22 * * ?
