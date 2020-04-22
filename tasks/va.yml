@@ -4,7 +4,7 @@ VA-scrape:
   enabled: true
   environment: scrapers
   triggers:
-    - cron: 0 0,10 * * ?
+    - cron: 0 0 * * ?
   next_tasks:
     - VA-text
 
