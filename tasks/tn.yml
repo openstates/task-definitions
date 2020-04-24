@@ -1,6 +1,6 @@
 TN-scrape:
   image: openstates/openstates
-  entrypoint: "poetry run pupa update tn bills"
+  entrypoint: "poetry run os-update tn bills"
   enabled: true
   memory: 1024
   environment: scrapers

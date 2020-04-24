@@ -1,6 +1,6 @@
 AK-scrape:
   image: openstates/openstates
-  entrypoint: "poetry run pupa update ak bills"
+  entrypoint: "poetry run os-update ak bills"
   enabled: true
   environment: scrapers
   triggers:

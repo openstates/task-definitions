@@ -1,6 +1,6 @@
 NE-scrape:
   image: openstates/openstates
-  entrypoint: "poetry run pupa update ne bills" # votes
+  entrypoint: "poetry run os-update ne bills" # votes
   enabled: true
   environment: scrapers
   triggers:

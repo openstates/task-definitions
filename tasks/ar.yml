@@ -1,6 +1,6 @@
 AR-scrape:
   image: openstates/openstates
-  entrypoint: "poetry run pupa update ar bills"
+  entrypoint: "poetry run os-update ar bills"
   enabled: true
   environment: scrapers
   triggers:

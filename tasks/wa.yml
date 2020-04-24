@@ -1,6 +1,6 @@
 WA-scrape:
   image: openstates/openstates
-  entrypoint: "poetry run pupa update wa bills"
+  entrypoint: "poetry run os-update wa bills"
   enabled: true
   environment: scrapers
   triggers:

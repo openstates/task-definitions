@@ -1,6 +1,6 @@
 OK-scrape:
   image: openstates/openstates
-  entrypoint: "poetry run pupa update ok bills"
+  entrypoint: "poetry run os-update ok bills"
   enabled: true
   environment: scrapers
   triggers:

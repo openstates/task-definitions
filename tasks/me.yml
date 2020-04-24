@@ -1,6 +1,6 @@
 ME-scrape:
   image: openstates/openstates
-  entrypoint: "poetry run pupa update me bills"
+  entrypoint: "poetry run os-update me bills"
   enabled: true
   environment: scrapers
   triggers:

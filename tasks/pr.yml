@@ -1,6 +1,6 @@
 PR-scrape:
   image: openstates/openstates
-  entrypoint: "poetry run pupa update pr bills --fast"
+  entrypoint: "poetry run os-update pr bills --fast"
   enabled: true
   environment: scrapers
   triggers:

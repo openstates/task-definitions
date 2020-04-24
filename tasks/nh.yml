@@ -1,6 +1,6 @@
 NH-scrape:
   image: openstates/openstates
-  entrypoint: "poetry run pupa update nh bills"
+  entrypoint: "poetry run os-update nh bills"
   enabled: true
   environment: scrapers
   triggers:

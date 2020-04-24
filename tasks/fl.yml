@@ -1,6 +1,6 @@
 FL-scrape:
   image: openstates/openstates
-  entrypoint: "poetry run pupa update fl bills"
+  entrypoint: "poetry run os-update fl bills"
   enabled: true
   environment: scrapers
   triggers:

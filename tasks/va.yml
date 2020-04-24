@@ -1,6 +1,6 @@
 VA-scrape:
   image: openstates/openstates
-  entrypoint: "poetry run pupa update va bills"
+  entrypoint: "poetry run os-update va bills"
   enabled: true
   environment: scrapers
   triggers:

@@ -1,6 +1,6 @@
 NM-scrape:
   image: openstates/openstates
-  entrypoint: "poetry run pupa update nm bills"  # votes
+  entrypoint: "poetry run os-update nm bills"  # votes
   enabled: true
   environment: scrapers
   triggers:

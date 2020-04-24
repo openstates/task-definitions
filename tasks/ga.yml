@@ -1,6 +1,6 @@
 GA-scrape:
   image: openstates/openstates
-  entrypoint: "poetry run pupa update ga bills"
+  entrypoint: "poetry run os-update ga bills"
   enabled: true
   environment: scrapers
   triggers:

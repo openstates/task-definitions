@@ -1,6 +1,6 @@
 MA-scrape:
   image: openstates/openstates
-  entrypoint: "poetry run pupa update ma bills"
+  entrypoint: "poetry run os-update ma bills"
   enabled: true
   environment: scrapers
   triggers:

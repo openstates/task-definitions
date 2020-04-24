@@ -1,6 +1,6 @@
 OH-scrape:
   image: openstates/openstates
-  entrypoint: "poetry run pupa update oh bills"
+  entrypoint: "poetry run os-update oh bills"
   enabled: true
   environment: scrapers
   triggers:

@@ -1,6 +1,6 @@
 MO-scrape:
   image: openstates/openstates
-  entrypoint: "poetry run pupa update mo bills"
+  entrypoint: "poetry run os-update mo bills"
   enabled: true
   environment: scrapers
   triggers:
