@@ -37,10 +37,3 @@ web-update-bundles:
   entrypoint: ['poetry', 'run', './manage.py', 'manage_bundle', 'covid19', '--search', '"coronavirus OR covid"', '--name', '"Coronavirus / COVID-19 Legislation"']
   triggers:
     - cron: 0 4 * * ?
-web-update-materialized-views:
-  image: openstates/openstates.org:django-dev
-  environment: scrapers
-  enabled: true
-  entrypoint: ['poetry', 'run', './manage.py', 'update_materialized_views']
-  triggers:
-    - cron: 0 0,2,4,6,8,10,12,14,16,18,20,22 * * ?
