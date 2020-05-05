@@ -34,6 +34,6 @@ web-update-bundles:
   image: openstates/openstates.org:django-dev
   environment: scrapers
   enabled: true
-  entrypoint: ['poetry', 'run', './manage.py', 'manage_bundle', 'covid19', '--search', '"coronavirus OR covid"', '--name', '"Coronavirus / COVID-19 Legislation"']
+  entrypoint: ['poetry', 'run', './manage.py', 'manage_bundle', 'covid19', '--search', 'coronavirus OR covid', '--name', '"Coronavirus / COVID-19 Legislation"']
   triggers:
     - cron: 0 4 * * ?
