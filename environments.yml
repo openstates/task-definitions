@@ -1,0 +1,37 @@
+backups:
+  - variable: AWS_ACCESS_KEY_ID
+    paramstore: /bobsled/backups/AWS_ACCESS_KEY_ID
+  - variable: AWS_SECRET_ACCESS_KEY
+    paramstore: /bobsled/backups/AWS_SECRET_ACCESS_KEY
+  - variable: PGHOST
+    paramstore: /bobsled/backups/PGHOST
+  - variable: PGPASSWORD
+    paramstore: /bobsled/backups/PGPASSWORD
+  - variable: PGDATABASE
+    string: openstatesorg
+  - variable: PGUSER
+    string: openstates
+  - variable: S3_BUCKET
+    string: openstates-backups
+
+commands:
+  - variable: DATABASE_URL
+    paramstore: /bobsled/scrapers/DATABASE_URL 
+  - variable: AWS_ACCESS_KEY_ID
+    paramstore: /bobsled/backups/AWS_ACCESS_KEY_ID
+  - variable: AWS_SECRET_ACCESS_KEY
+    paramstore: /bobsled/backups/AWS_SECRET_ACCESS_KEY
+  - variable: MANAGEMENT_COMMAND_ONLY
+    string: 'true'
+
+scrapers:
+  - variable: DATABASE_URL
+    paramstore: /bobsled/scrapers/DATABASE_URL 
+  - variable: INDIANA_API_KEY
+    paramstore: /bobsled/scrapers/INDIANA_API_KEY
+  - variable: VIRGINIA_FTP_PASSWORD
+    paramstore: /bobsled/scrapers/VIRGINIA_FTP_PASSWORD 
+  - variable: VIRGINIA_FTP_USER
+    paramstore: /bobsled/scrapers/VIRGINIA_FTP_USER
+  - variable: NEW_YORK_API_KEY
+    paramstore: /bobsled/scrapers/NEW_YORK_API_KEY 

@@ -2,14 +2,14 @@ update-people:
   image: openstates/people:latest
   entrypoint: "poetry run ./scripts/to_database.py"
   enabled: true
-  environment: scrapers
+  environment: commands
   triggers:
     - cron: 0 0 * * ?
 people-csv:
   image: openstates/people:latest
   entrypoint: "poetry run ./scripts/to_csv.py --upload"
   enabled: true
-  environment: backups
+  environment: commands
   triggers:
     - cron: 0 0 * * ?
 backup:
@@ -21,7 +21,7 @@ backup:
     - cron: 0 0 * * ?
 csv-export:
   image: openstates/openstates.org:django-dev
-  environment: scrapers
+  environment: commands
   enabled: true
   memory: 4096
   cpu: 512
@@ -32,7 +32,7 @@ csv-export:
 
 web-update-bundles:
   image: openstates/openstates.org:django-dev
-  environment: scrapers
+  environment: commands
   enabled: true
   entrypoint: ['poetry', 'run', './manage.py', 'manage_bundle', 'covid19', '--search', 'coronavirus OR covid', '--name', '"Coronavirus / COVID-19 Legislation"']
   triggers:
