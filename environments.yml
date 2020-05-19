@@ -9,10 +9,13 @@ backups:
     paramstore: /bobsled/backups/PGPASSWORD
   - variable: PGDATABASE
     string: openstatesorg
+    masked: false
   - variable: PGUSER
     string: openstates
+    masked: false
   - variable: S3_BUCKET
     string: openstates-backups
+    masked: false
 
 commands:
   - variable: DATABASE_URL
@@ -23,6 +26,7 @@ commands:
     paramstore: /bobsled/backups/AWS_SECRET_ACCESS_KEY
   - variable: MANAGEMENT_COMMAND_ONLY
     string: 'true'
+    masked: false
 
 scrapers:
   - variable: DATABASE_URL
