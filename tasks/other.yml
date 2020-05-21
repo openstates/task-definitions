@@ -37,3 +37,11 @@ web-update-bundles:
   entrypoint: ['poetry', 'run', './manage.py', 'manage_bundle', 'covid19', '--search', 'coronavirus OR covid', '--name', '"Coronavirus / COVID-19 Legislation"']
   triggers:
     - cron: 0 4 * * ?
+
+data-quality-report:
+  image: openstates/openstates.org:django-dev
+  environment: commands
+  enabled: true
+  entrypoint: ['poetry', 'run', './manage.py', 'data_quality', 'all_sessions']
+  triggers:
+    - cron: 0 6 * * ?
