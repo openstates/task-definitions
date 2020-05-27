@@ -42,6 +42,6 @@ data-quality-report:
   image: openstates/openstates.org:django-dev
   environment: commands
   enabled: true
-  entrypoint: ['poetry', 'run', './manage.py', 'data_quality', 'all_sessions']
+  entrypoint: ['poetry', 'run', './manage.py', 'data_quality', 'all']
   triggers:
     - cron: 0 6 * * ?
