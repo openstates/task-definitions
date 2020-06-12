@@ -1,6 +1,6 @@
 MN-scrape:
   image: openstates/openstates
-  entrypoint: "poetry run os-update mn bills votes"
+  entrypoint: "poetry run os-update mn bills"
   enabled: true
   environment: scrapers
   triggers:
