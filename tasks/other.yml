@@ -43,6 +43,6 @@ data-quality-report:
   environment: commands
   enabled: false
   memory: 1024
-  entrypoint: ['poetry', 'run', './manage.py', 'data_quality', 'tx']
+  entrypoint: ['poetry', 'run', './manage.py', 'data_quality', 'tx', '--session', '86']
   triggers:
     - cron: 0 6 * * ?
