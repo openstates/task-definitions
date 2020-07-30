@@ -1,7 +1,7 @@
 IN-scrape:
   image: openstates/openstates
   entrypoint: "poetry run os-update in bills"
-  enabled: true
+  enabled: false
   environment: scrapers
   triggers:
     - cron: 0 6 * * ?
