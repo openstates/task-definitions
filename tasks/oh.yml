@@ -5,6 +5,7 @@ OH-scrape:
   environment: scrapers
   triggers:
     - cron: 0 5 * * ?
+  timeout_minutes: 360
   next_tasks:
     - OH-text
 

@@ -5,6 +5,7 @@ MO-scrape:
   environment: scrapers
   triggers:
     - cron: 0 6 * * ?
+  timeout_minutes: 360
   next_tasks:
     - MO-text
 

@@ -5,6 +5,7 @@ OR-scrape:
   environment: scrapers
   triggers:
     - cron: 0 8 * * ?
+  timeout_minutes: 360
   next_tasks:
     - OR-text
 

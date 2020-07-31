@@ -6,6 +6,7 @@ DE-scrape:
   triggers:
     - cron: 0 5 * * ?
   memory: 1024
+  timeout_minutes: 360
   next_tasks:
     - DE-text
 

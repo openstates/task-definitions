@@ -6,6 +6,7 @@ NY-scrape:
   memory: 1024
   triggers:
     - cron: 0 5 * * ?
+  timeout_minutes: 360
   next_tasks:
     - NY-text
 

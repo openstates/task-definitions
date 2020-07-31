@@ -5,6 +5,7 @@ AZ-scrape:
   environment: scrapers
   triggers:
     - cron: 0 7 * * ?
+  timeout_minutes: 360
   next_tasks:
     - AZ-text
 

@@ -5,6 +5,7 @@ VA-scrape:
   environment: scrapers
   triggers:
     - cron: 0 0 * * ?
+  timeout_minutes: 360
   next_tasks:
     - VA-text
 
