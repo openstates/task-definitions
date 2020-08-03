@@ -6,7 +6,7 @@ IL-scrape:
   memory: 1024
   triggers:
     - cron: 0 6 * * ?
-  timeout_minutes: 360
+  timeout_minutes: 900 # regularly 12 hours, 15 to be safe
   next_tasks:
     - IL-text
 

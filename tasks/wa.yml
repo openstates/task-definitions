@@ -5,7 +5,7 @@ WA-scrape:
   environment: scrapers
   triggers:
     - cron: 0 8 * * ?
-  timeout_minutes: 360
+  timeout_minutes: 480
   next_tasks:
     - WA-text
 
