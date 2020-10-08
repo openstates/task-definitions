@@ -5,7 +5,7 @@ SC-scrape:
   environment: scrapers
   triggers:
     - cron: 0 4 * * ?
-  timeout_minutes: 480
+  timeout_minutes: 600
   next_tasks:
     - SC-text
 
