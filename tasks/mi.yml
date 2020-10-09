@@ -6,6 +6,7 @@ MI-scrape:
   triggers:
     - cron: 0 6 * * ?
   timeout_minutes: 360
+  memory: 1024
   next_tasks:
     - MI-text
 
