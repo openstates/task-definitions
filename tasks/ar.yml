@@ -1,7 +1,7 @@
 AR-scrape:
   image: openstates/openstates
   entrypoint: "poetry run os-update ar bills"
-  enabled: true
+  enabled: false
   environment: scrapers
   triggers:
     - cron: 0 6 * * ?

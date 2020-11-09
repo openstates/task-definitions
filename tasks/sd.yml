@@ -1,7 +1,7 @@
 SD-scrape:
   image: openstates/openstates
   entrypoint: "poetry run os-update sd bills"
-  enabled: true
+  enabled: false
   environment: scrapers
   triggers:
     - cron: 0 7 * * ?
