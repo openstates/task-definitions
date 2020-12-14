@@ -4,7 +4,8 @@ DE-scrape:
   enabled: true
   environment: scrapers
   triggers:
-    - cron: 0 5 * * ?
+    - cron: 0 */2 * * ?
+#    - cron: 0 5 * * ?
   memory: 1024
   timeout_minutes: 360
   next_tasks:
