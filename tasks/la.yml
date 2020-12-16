@@ -1,5 +1,5 @@
 LA-scrape:
-  image: openstates/openstates
+  image: openstates/scrapers
   entrypoint: "poetry run os-update la bills session=2020"
   enabled: true
   environment: scrapers
@@ -10,7 +10,7 @@ LA-scrape:
     - LA-text
 
 LA-scrape-special:
-  image: openstates/openstates
+  image: openstates/scrapers
   entrypoint: "poetry run os-update la bills session=2020s2"
   enabled: true
   environment: scrapers

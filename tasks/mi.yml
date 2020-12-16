@@ -1,5 +1,5 @@
 MI-scrape:
-  image: openstates/openstates
+  image: openstates/scrapers
   entrypoint: "poetry run os-update mi bills"
   enabled: true
   environment: scrapers

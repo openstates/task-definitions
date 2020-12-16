@@ -1,5 +1,5 @@
 PA-scrape:
-  image: openstates/openstates
+  image: openstates/scrapers
   entrypoint: "poetry run os-update pa bills"
   enabled: true
   memory: 1024

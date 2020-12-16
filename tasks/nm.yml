@@ -1,5 +1,5 @@
 NM-scrape:
-  image: openstates/openstates
+  image: openstates/scrapers
   entrypoint: "poetry run os-update nm bills"  # votes
   enabled: true
   environment: scrapers

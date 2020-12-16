@@ -1,5 +1,5 @@
 WA-scrape:
-  image: openstates/openstates
+  image: openstates/scrapers
   entrypoint: "poetry run os-update wa bills"
   enabled: true
   environment: scrapers

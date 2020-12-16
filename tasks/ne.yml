@@ -1,5 +1,5 @@
 NE-scrape:
-  image: openstates/openstates
+  image: openstates/scrapers
   entrypoint: "poetry run os-update ne bills" # votes
   enabled: true
   environment: scrapers

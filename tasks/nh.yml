@@ -1,5 +1,5 @@
 NH-scrape:
-  image: openstates/openstates
+  image: openstates/scrapers
   entrypoint: "poetry run os-update nh bills"
   enabled: false
   environment: scrapers

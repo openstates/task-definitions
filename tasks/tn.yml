@@ -1,5 +1,5 @@
 TN-scrape:
-  image: openstates/openstates
+  image: openstates/scrapers
   entrypoint: "poetry run os-update tn bills"
   enabled: true
   memory: 1024

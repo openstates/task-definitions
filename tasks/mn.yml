@@ -1,5 +1,5 @@
 MN-scrape:
-  image: openstates/openstates
+  image: openstates/scrapers
   entrypoint: "poetry run os-update mn bills"
   enabled: true
   environment: scrapers

@@ -1,5 +1,5 @@
 UT-scrape:
-  image: openstates/openstates
+  image: openstates/scrapers
   entrypoint: "poetry run os-update ut bills"
   enabled: true
   environment: scrapers

@@ -1,5 +1,5 @@
 NY-scrape:
-  image: openstates/openstates
+  image: openstates/scrapers
   entrypoint: "poetry run os-update ny bills"
   enabled: true
   environment: scrapers

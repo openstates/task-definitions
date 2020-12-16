@@ -1,5 +1,5 @@
 DE-scrape:
-  image: openstates/openstates
+  image: openstates/scrapers
   entrypoint: "poetry run os-update de bills"
   enabled: true
   environment: scrapers

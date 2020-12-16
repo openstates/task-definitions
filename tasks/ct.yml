@@ -1,5 +1,5 @@
 CT-scrape:
-  image: openstates/openstates
+  image: openstates/scrapers
   entrypoint: "poetry run os-update ct bills"
   enabled: false
   environment: scrapers

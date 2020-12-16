@@ -1,5 +1,5 @@
 ND-scrape:
-  image: openstates/openstates
+  image: openstates/scrapers
   entrypoint: "poetry run os-update nd bills" # votes
   enabled: true
   environment: scrapers

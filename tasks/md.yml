@@ -1,5 +1,5 @@
 MD-scrape:
-  image: openstates/openstates
+  image: openstates/scrapers
   entrypoint: "poetry run os-update md bills votes"
   enabled: false
   environment: scrapers

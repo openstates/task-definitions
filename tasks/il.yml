@@ -1,5 +1,5 @@
 IL-scrape:
-  image: openstates/openstates
+  image: openstates/scrapers
   entrypoint: "poetry run os-update il bills"
   enabled: true
   environment: scrapers

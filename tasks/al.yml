@@ -1,5 +1,5 @@
 AL-scrape:
-  image: openstates/openstates
+  image: openstates/scrapers
   entrypoint: "poetry run os-update al bills"
   enabled: true
   environment: scrapers

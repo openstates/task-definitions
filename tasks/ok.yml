@@ -1,5 +1,5 @@
 OK-scrape:
-  image: openstates/openstates
+  image: openstates/scrapers
   entrypoint: "poetry run os-update ok bills"
   enabled: true
   environment: scrapers

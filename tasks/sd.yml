@@ -1,5 +1,5 @@
 SD-scrape:
-  image: openstates/openstates
+  image: openstates/scrapers
   entrypoint: "poetry run os-update sd bills"
   enabled: false
   environment: scrapers

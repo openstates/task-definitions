@@ -1,5 +1,5 @@
 KY-scrape:
-  image: openstates/openstates
+  image: openstates/scrapers
   entrypoint: "poetry run os-update ky bills session=2021RS prefiles=True"
   enabled: true
   environment: scrapers

@@ -20,7 +20,7 @@ backup:
   triggers:
     - cron: 0 0 * * ?
 csv-export:
-  image: openstates/openstates.org:django-dev
+  image: openstates/scrapers.org:django-dev
   environment: commands
   enabled: true
   memory: 4096
@@ -31,7 +31,7 @@ csv-export:
     - cron: 0 0 1 * ?
 
 web-update-bundles:
-  image: openstates/openstates.org:django-dev
+  image: openstates/scrapers.org:django-dev
   environment: commands
   enabled: true
   entrypoint: ['poetry', 'run', './manage.py', 'manage_bundle', 'covid19', '--search', 'coronavirus OR covid', '--name', '"Coronavirus / COVID-19 Legislation"']
@@ -39,7 +39,7 @@ web-update-bundles:
     - cron: 0 4 * * ?
 
 data-quality-report:
-  image: openstates/openstates.org:django-dev
+  image: openstates/scrapers.org:django-dev
   environment: commands
   enabled: true
   memory: 1024

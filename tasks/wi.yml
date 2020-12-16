@@ -1,5 +1,5 @@
 WI-scrape:
-  image: openstates/openstates
+  image: openstates/scrapers
   entrypoint: "poetry run os-update wi bills"
   enabled: true
   environment: scrapers

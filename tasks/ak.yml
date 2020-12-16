@@ -1,5 +1,5 @@
 AK-scrape:
-  image: openstates/openstates
+  image: openstates/scrapers
   entrypoint: "poetry run os-update ak bills"
   enabled: true
   environment: scrapers

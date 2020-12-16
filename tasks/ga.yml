@@ -1,5 +1,5 @@
 GA-scrape:
-  image: openstates/openstates
+  image: openstates/scrapers
   entrypoint: "poetry run os-update ga bills"
   enabled: true
   environment: scrapers

@@ -1,5 +1,5 @@
 RI-scrape:
-  image: openstates/openstates
+  image: openstates/scrapers
   entrypoint: "poetry run os-update ri bills"
   enabled: true
   environment: scrapers

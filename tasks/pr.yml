@@ -1,5 +1,5 @@
 PR-scrape:
-  image: openstates/openstates
+  image: openstates/scrapers
   entrypoint: "poetry run os-update pr bills --fast"
   enabled: true
   environment: scrapers

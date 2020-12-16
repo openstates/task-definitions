@@ -1,5 +1,5 @@
 OH-scrape:
-  image: openstates/openstates
+  image: openstates/scrapers
   entrypoint: "poetry run os-update oh bills"
   enabled: true
   environment: scrapers

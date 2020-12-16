@@ -1,5 +1,5 @@
 WV-scrape:
-  image: openstates/openstates
+  image: openstates/scrapers
   entrypoint: "poetry run os-update wv bills"
   enabled: true
   environment: scrapers

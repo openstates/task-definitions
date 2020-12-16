@@ -1,5 +1,5 @@
 DC-scrape:
-  image: openstates/openstates
+  image: openstates/scrapers
   entrypoint: "poetry run os-update dc bills"
   enabled: true
   environment: scrapers

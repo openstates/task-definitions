@@ -1,5 +1,5 @@
 KS-scrape:
-  image: openstates/openstates
+  image: openstates/scrapers
   entrypoint: "poetry run os-update ks bills"
   enabled: true
   environment: scrapers
