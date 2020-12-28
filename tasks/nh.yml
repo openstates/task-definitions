@@ -1,7 +1,7 @@
 NH-scrape:
   image: openstates/scrapers
   entrypoint: "poetry run os-update nh bills"
-  enabled: false
+  enabled: true
   environment: scrapers
   triggers:
     - cron: 0 5 * * ?
