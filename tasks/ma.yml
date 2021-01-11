@@ -4,7 +4,8 @@ MA-scrape:
   enabled: true
   environment: scrapers
   triggers:
-    - cron: 0 5 * * ?
+    - cron: 0 */6 * * ?
+#    - cron: 0 5 * * ?
   timeout_minutes: 2160  # 36 hours :(
   next_tasks:
     - MA-text
