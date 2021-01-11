@@ -4,7 +4,8 @@ RI-scrape:
   enabled: true
   environment: scrapers
   triggers:
-    - cron: 0 5 * * ?
+    - cron: 0 */2 * * ?
+#    - cron: 0 5 * * ?
   timeout_minutes: 360
   next_tasks:
     - RI-text
