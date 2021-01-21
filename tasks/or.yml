@@ -1,6 +1,6 @@
 OR-scrape:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update or bills "  # votes
+  entrypoint: "poetry run os-update or bills votes"
   enabled: true
   environment: scrapers
   triggers:
