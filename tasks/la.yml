@@ -1,7 +1,7 @@
 LA-scrape:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update la bills session=2020"
-  enabled: false
+  entrypoint: "poetry run os-update la bills"
+  enabled: true
   environment: scrapers
   triggers:
     - cron: 0 6 * * ?
