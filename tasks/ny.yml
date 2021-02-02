@@ -1,3 +1,13 @@
+NY-scrape-2020:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update ny bills session=2019-2020"
+  enabled: false
+  environment: scrapers
+  memory: 1024
+  timeout_minutes: 600  # regularly 7 hours, 10 to be safe
+  next_tasks:
+    - NY-text
+
 NY-scrape:
   image: openstates/scrapers
   entrypoint: "poetry run os-update ny bills"
