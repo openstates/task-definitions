@@ -10,6 +10,17 @@ MA-scrape:
   next_tasks:
     - MA-text
 
+MA-scrape-full:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update ma bills"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 0 5 * * tue,fri,sun
+  timeout_minutes: 2160  # 36 hours :(
+  next_tasks:
+    - MA-text
+
 MA-text:
   image: openstates/text-extraction
   entrypoint: "poetry run ./text_extract.py update ma"
