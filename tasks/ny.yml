@@ -5,7 +5,7 @@ NY-scrape:
   environment: scrapers
   memory: 1024
   triggers:
-    - cron: 0 5 * * ?
+    - cron: 0 1,19 * * ?
   timeout_minutes: 600  # regularly 7 hours, 10 to be safe
   next_tasks:
     - NY-text
