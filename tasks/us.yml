@@ -1,6 +1,6 @@
 US-scrape:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update usa bills votes"
+  entrypoint: "poetry run os-update usa bills --fast"
   enabled: true
   environment: scrapers
   triggers:
