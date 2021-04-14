@@ -1,6 +1,6 @@
 TX-scrape:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update tx bills"
+  entrypoint: "poetry run os-update tx bills votes"
   enabled: true
   environment: scrapers
   triggers:

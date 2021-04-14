@@ -1,6 +1,6 @@
 IA-scrape:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update ia bills"
+  entrypoint: "poetry run os-update ia bills votes"
   enabled: true
   environment: scrapers
   triggers:
