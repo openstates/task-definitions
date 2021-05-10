@@ -1,13 +1,13 @@
 update-people:
   image: openstates/people:latest
-  entrypoint: "poetry run ./scripts/to_database.py"
+  entrypoint: "poetry run os-to-database"
   enabled: true
   environment: commands
   triggers:
     - cron: 0 0 * * ?
 people-csv:
   image: openstates/people:latest
-  entrypoint: "poetry run ./scripts/to_csv.py --upload"
+  entrypoint: "poetry run os-to-csv --upload"
   enabled: true
   environment: commands
   triggers:
