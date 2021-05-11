@@ -11,7 +11,7 @@ AR-scrape:
     - AR-text
 
 AR-text:
-  image: openstates/text-extraction
-  entrypoint: "poetry run ./text_extract.py update ar"
+  image: openstates/core
+  entrypoint: "poetry run os-text-extract update ar"
   enabled: true
   environment: scrapers
