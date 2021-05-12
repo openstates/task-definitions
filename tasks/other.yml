@@ -13,8 +13,8 @@ people-csv:
   triggers:
     - cron: 0 0 * * ?
 backup:
-  image: openstates/openstates.org:django-dev
-  entrypoint: "./docker/cron/backup.sh"
+  image: openstates/openstates.org:tasks
+  entrypoint: "/code/docker/cron/backup.sh"
   enabled: true
   environment: backups
   triggers:
