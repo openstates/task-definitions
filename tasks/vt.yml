@@ -11,7 +11,7 @@ VT-scrape:
     - VT-text
 
 VT-text:
-  image: openstates/text-extraction
-  entrypoint: "poetry run ./text_extract.py update vt"
+  image: openstates/core
+  entrypoint: "poetry run os-text-extract update vt"
   enabled: true
   environment: scrapers

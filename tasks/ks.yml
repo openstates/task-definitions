@@ -11,7 +11,7 @@ KS-scrape:
     - KS-text
 
 KS-text:
-  image: openstates/text-extraction
-  entrypoint: "poetry run ./text_extract.py update ks"
+  image: openstates/core
+  entrypoint: "poetry run os-text-extract update ks"
   enabled: true
   environment: scrapers

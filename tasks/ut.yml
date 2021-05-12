@@ -11,7 +11,7 @@ UT-scrape:
     - UT-text
 
 UT-text:
-  image: openstates/text-extraction
-  entrypoint: "poetry run ./text_extract.py update ut"
+  image: openstates/core
+  entrypoint: "poetry run os-text-extract update ut"
   enabled: true
   environment: scrapers

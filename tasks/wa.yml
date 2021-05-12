@@ -11,7 +11,7 @@ WA-scrape:
     - WA-text
 
 WA-text:
-  image: openstates/text-extraction
-  entrypoint: "poetry run ./text_extract.py update wa"
+  image: openstates/core
+  entrypoint: "poetry run os-text-extract update wa"
   enabled: true
   environment: scrapers

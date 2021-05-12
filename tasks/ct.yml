@@ -11,7 +11,7 @@ CT-scrape:
     - CT-text
 
 CT-text:
-  image: openstates/text-extraction
-  entrypoint: "poetry run ./text_extract.py update ct"
+  image: openstates/core
+  entrypoint: "poetry run os-text-extract update ct"
   enabled: true
   environment: scrapers

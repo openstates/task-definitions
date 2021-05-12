@@ -11,7 +11,7 @@ AZ-scrape:
     - AZ-text
 
 AZ-text:
-  image: openstates/text-extraction
-  entrypoint: "poetry run ./text_extract.py update az"
+  image: openstates/core
+  entrypoint: "poetry run os-text-extract update az"
   enabled: true
   environment: scrapers

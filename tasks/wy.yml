@@ -11,7 +11,7 @@ WY-scrape:
     - WY-text
 
 WY-text:
-  image: openstates/text-extraction
-  entrypoint: "poetry run ./text_extract.py update wy"
+  image: openstates/core
+  entrypoint: "poetry run os-text-extract update wy"
   enabled: true
   environment: scrapers

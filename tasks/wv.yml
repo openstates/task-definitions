@@ -11,7 +11,7 @@ WV-scrape:
     - WV-text
 
 WV-text:
-  image: openstates/text-extraction
-  entrypoint: "poetry run ./text_extract.py update wv"
+  image: openstates/core
+  entrypoint: "poetry run os-text-extract update wv"
   enabled: true
   environment: scrapers

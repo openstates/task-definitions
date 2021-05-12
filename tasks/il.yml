@@ -12,7 +12,7 @@ IL-scrape:
     - IL-text
 
 IL-text:
-  image: openstates/text-extraction
-  entrypoint: "poetry run ./text_extract.py update il"
+  image: openstates/core
+  entrypoint: "poetry run os-text-extract update il"
   enabled: true
   environment: scrapers

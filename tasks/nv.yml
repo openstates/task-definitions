@@ -11,7 +11,7 @@ NV-scrape:
     - NV-text
 
 NV-text:
-  image: openstates/text-extraction
-  entrypoint: "poetry run ./text_extract.py update nv"
+  image: openstates/core
+  entrypoint: "poetry run os-text-extract update nv"
   enabled: true
   environment: scrapers

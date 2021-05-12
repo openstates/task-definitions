@@ -11,7 +11,7 @@ NY-scrape:
     - NY-text
 
 NY-text:
-  image: openstates/text-extraction
-  entrypoint: "poetry run ./text_extract.py update ny"
+  image: openstates/core
+  entrypoint: "poetry run os-text-extract update ny"
   enabled: true
   environment: scrapers

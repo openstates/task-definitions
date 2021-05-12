@@ -10,7 +10,7 @@ MO-scrape:
     - MO-text
 
 MO-text:
-  image: openstates/text-extraction
-  entrypoint: "poetry run ./text_extract.py update mo"
+  image: openstates/core
+  entrypoint: "poetry run os-text-extract update mo"
   enabled: true
   environment: scrapers

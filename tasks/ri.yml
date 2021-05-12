@@ -11,7 +11,7 @@ RI-scrape:
     - RI-text
 
 RI-text:
-  image: openstates/text-extraction
-  entrypoint: "poetry run ./text_extract.py update ri"
+  image: openstates/core
+  entrypoint: "poetry run os-text-extract update ri"
   enabled: true
   environment: scrapers

@@ -11,7 +11,7 @@ ID-scrape:
     - ID-text
 
 ID-text:
-  image: openstates/text-extraction
-  entrypoint: "poetry run ./text_extract.py update id"
+  image: openstates/core
+  entrypoint: "poetry run os-text-extract update id"
   enabled: true
   environment: scrapers
