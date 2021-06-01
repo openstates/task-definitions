@@ -1,17 +1,3 @@
-update-people:
-  image: openstates/people:latest
-  entrypoint: "poetry run os-people to-database"
-  enabled: true
-  environment: commands
-  triggers:
-    - cron: 0 0 * * ?
-people-csv:
-  image: openstates/people:latest
-  entrypoint: "poetry run os-people to-csv --upload"
-  enabled: true
-  environment: commands
-  triggers:
-    - cron: 0 0 * * ?
 backup:
   image: openstates/openstates.org:tasks
   entrypoint: "/code/docker/cron/backup.sh"

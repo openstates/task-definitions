@@ -19,7 +19,7 @@ backups:
 
 commands:
   - variable: DATABASE_URL
-    paramstore: /bobsled/scrapers/DATABASE_URL 
+    paramstore: /bobsled/scrapers/DATABASE_URL
   - variable: AWS_ACCESS_KEY_ID
     paramstore: /bobsled/backups/AWS_ACCESS_KEY_ID
   - variable: AWS_SECRET_ACCESS_KEY
