@@ -1,6 +1,7 @@
 TX-scrape:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update tx bills votes"
+# entrypoint: "poetry run os-update tx bills votes" temporarily disabled votes because no votes in special session yet
+  entrypoint: "poetry run os-update tx bills"
   enabled: true
   environment: scrapers
   triggers:
