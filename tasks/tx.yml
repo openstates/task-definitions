@@ -20,6 +20,15 @@ TX-scrape-1st-special:
   next_tasks:
     - TX-text
 
+TX-scrape-regular:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update tx bills session=87"
+  enabled: true
+  environment: scrapers
+  timeout_minutes: 480
+  next_tasks:
+    - TX-text
+
 TX-text:
   image: openstates/core
   entrypoint: "poetry run os-text-extract update tx"
