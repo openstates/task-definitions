@@ -25,7 +25,7 @@ TX-scrape-regular:
   entrypoint: "poetry run os-update tx bills session=87"
   enabled: true
   environment: scrapers
-  timeout_minutes: 480
+  timeout_minutes: 1200
   next_tasks:
     - TX-text
 
