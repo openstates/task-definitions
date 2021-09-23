@@ -10,6 +10,15 @@ TX-scrape:
   next_tasks:
     - TX-text
 
+TX-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update tx events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 0 8,17 * * ?
+  timeout_minutes: 60
+
 TX-text:
   image: openstates/core
   entrypoint: "poetry run os-text-extract update tx"
