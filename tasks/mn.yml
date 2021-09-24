@@ -16,7 +16,7 @@ MN-events:
   enabled: true
   environment: scrapers
   triggers:
-    - cron: 0 8,17 * * ?
+    - cron: 20 8,17 * * ?
   timeout_minutes: 60
 
 MN-text:
