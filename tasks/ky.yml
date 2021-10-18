@@ -10,6 +10,18 @@ KY-scrape:
   next_tasks:
     - KY-text
 
+KY-scrape-first-special:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update ky bills session=2021SS"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 0 */6 * * ?
+#    - cron: 0 6 * * ?
+  timeout_minutes: 360
+  next_tasks:
+    - KY-text
+
 KY-text:
   image: openstates/core
   entrypoint: "poetry run os-text-extract update ky"
