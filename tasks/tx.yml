@@ -20,24 +20,6 @@ TX-events:
     - cron: 0 8,17 * * ?
   timeout_minutes: 60
 
-TX-scrape-1st-special:
-  image: openstates/scrapers
-  entrypoint: "poetry run os-update tx bills session=871"
-  enabled: true
-  environment: scrapers
-  timeout_minutes: 480
-  next_tasks:
-    - TX-text
-
-TX-scrape-regular:
-  image: openstates/scrapers
-  entrypoint: "poetry run os-update tx bills session=87"
-  enabled: true
-  environment: scrapers
-  timeout_minutes: 1200
-  next_tasks:
-    - TX-text
-
 TX-text:
   image: openstates/core
   entrypoint: "poetry run os-text-extract update tx"

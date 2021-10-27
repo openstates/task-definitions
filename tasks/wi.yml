@@ -1,6 +1,6 @@
 WI-scrape:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update wi bills session=2021"
+  entrypoint: "poetry run os-update wi bills"
   enabled: true
   environment: scrapers
   triggers:
