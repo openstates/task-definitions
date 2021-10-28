@@ -10,18 +10,6 @@ AR-scrape:
   next_tasks:
     - AR-text
 
-AR-scrape-regular:
-  image: openstates/scrapers
-  entrypoint: "poetry run os-update ar bills session=2021"
-  enabled: true
-  environment: scrapers
-  triggers:
-    - cron: 0 */6 * * ?
-#    - cron: 0 6 * * ?
-  timeout_minutes: 360
-  next_tasks:
-    - AR-text
-
 AR-text:
   image: openstates/core
   entrypoint: "poetry run os-text-extract update ar"

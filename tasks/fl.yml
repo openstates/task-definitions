@@ -1,6 +1,6 @@
 FL-scrape:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update fl bills session=2021"
+  entrypoint: "poetry run os-update fl bills"
   enabled: true
   environment: scrapers
   triggers:
