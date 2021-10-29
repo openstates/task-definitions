@@ -18,7 +18,7 @@ TX-events:
   environment: scrapers
   triggers:
     - cron: 0 8,17 * * ?
-  timeout_minutes: 60
+  timeout_minutes: 360
 
 TX-text:
   image: openstates/core
