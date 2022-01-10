@@ -1,6 +1,6 @@
 KY-scrape:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update ky bills prefiles=true"
+  entrypoint: "poetry run os-update ky bills"
   enabled: true
   environment: scrapers
   triggers:
