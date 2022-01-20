@@ -11,7 +11,7 @@ csv-export:
   enabled: true
   memory: 4096
   cpu: 512
-  entrypoint: "poetry run ./manage.py bulk_export all --format csv --with-updates 30"
+  entrypoint: "poetry run ./manage.py bulk_export all --format csv --with-updates 7"
   triggers:
     # every day
     - cron: 0 23 * * ?
