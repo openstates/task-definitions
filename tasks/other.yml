@@ -11,10 +11,10 @@ csv-export:
   enabled: true
   memory: 4096
   cpu: 512
-  entrypoint: "poetry run ./manage.py bulk_export all --format csv --with-updates 50"
+  entrypoint: "poetry run ./manage.py bulk_export all --format csv --with-updates 30"
   triggers:
-    # first of the month
-    - cron: 0 0 1 * ?
+    # every day
+    - cron: 0 23 * * ?
 
 web-update-bundles:
   image: openstates/openstates.org:tasks
