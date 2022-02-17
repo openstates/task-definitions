@@ -5,6 +5,7 @@ backup:
   environment: backups
   triggers:
     - cron: 0 0 * * ?
+
 csv-export:
   image: openstates/openstates.org:tasks
   environment: commands
@@ -15,13 +16,14 @@ csv-export:
   triggers:
     # every day
     - cron: 0 23 * * ?
+
 json-export:
   image: openstates/openstates.org:tasks
   environment: commands
   enabled: true
   memory: 4096
   cpu: 512
-  entrypoint: "poetry run ./manage.py bulk_export all --format json"
+  entrypoint: "poetry run ./manage.py bulk_export all --format json --with-updates 40"
   triggers:
     - cron: 0 23 1 * ?
 
