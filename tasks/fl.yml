@@ -12,6 +12,6 @@ FL-scrape:
 
 FL-text:
   image: openstates/core
-  entrypoint: "poetry run os-text-extract update fl --clear-errors"
+  entrypoint: "poetry run os-text-extract update fl"
   enabled: true
   environment: scrapers
