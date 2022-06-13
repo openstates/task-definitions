@@ -4,3 +4,4 @@ config.yaml
 MANIFEST
 dist/
 bobsled.egg-info
+.idea/
