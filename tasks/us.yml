@@ -8,15 +8,6 @@ US-scrape:
   timeout_minutes: 720
   # next_tasks:
   #   - US-text
-  
-US-scrape-votes:
-  image: openstates/scrapers
-  entrypoint: "poetry run os-update usa votes year=2022"
-  enabled: true
-  environment: scrapers
-  triggers:
-    - cron: 0 8 * * ?
-  timeout_minutes: 720
 
 # US-text:
   # image: openstates/core
