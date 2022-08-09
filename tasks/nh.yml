@@ -9,7 +9,7 @@ NH-scrape:
 #   http://www.gencourt.state.nh.us/scrap/scrape.html
 #   NH is limiting scraping to during the night only
 #   2 a.m. - 11 a.m. UTC should be 9 p.m. - 6 a.m. EDT
-     - cron: 0 2-11/2 * * ?
+     - cron: 0 2,4,6,8,10 * * ?
   timeout_minutes: 360
   next_tasks:
     - NH-text
