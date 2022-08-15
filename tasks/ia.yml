@@ -4,8 +4,8 @@ IA-scrape:
   enabled: true
   environment: scrapers
   triggers:
-    - cron: 0 3,9,12,18 * * ?
-#    - cron: 0 6 * * ?
+#    - cron: 0 3,9,12,18 * * ?
+    - cron: 0 6 * * ?
   timeout_minutes: 360
   next_tasks:
     - IA-text
