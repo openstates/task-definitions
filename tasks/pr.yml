@@ -6,7 +6,7 @@ PR-scrape:
   triggers:
     - cron: 0 */6 * * ?
 #    - cron: 0 4 * * ?
-  timeout_minutes: 360
+  timeout_minutes: 2160
   next_tasks:
     - PR-text
 
