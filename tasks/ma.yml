@@ -17,7 +17,7 @@ MA-scrape-full-lower:
   environment: scrapers
   triggers:
     - cron: 0 5 * * 2,4,6 # tue,fri,sun
-  timeout_minutes: 2160  # 36 hours :(
+  timeout_minutes: 2880  # 48 hours :(
   next_tasks:
     - MA-text
 
