@@ -1,6 +1,7 @@
 MD-scrape:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update md bills votes"
+  # entrypoint: "poetry run os-update md bills votes" temporarily disabled votes because no votes for prefiles yet
+  entrypoint: "poetry run os-update md bills"
   enabled: true
   environment: scrapers
   triggers:
