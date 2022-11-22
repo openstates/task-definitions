@@ -29,6 +29,10 @@ commands:
     masked: false
 
 scrapers:
+  - variable: AR_FTP_PASSWORD
+    paramstore: /bobsled/scrapers/AR_FTP_PASSWORD 
+  - variable: AR_FTP_USER
+    paramstore: /bobsled/scrapers/AR_FTP_USER
   - variable: DATABASE_URL
     paramstore: /bobsled/scrapers/DATABASE_URL 
   - variable: INDIANA_API_KEY
