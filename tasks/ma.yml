@@ -12,7 +12,7 @@ MA-scrape:
 
 MA-scrape-full-lower:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update ma bills chamber=lower"
+  entrypoint: "poetry run os-update ma bills chamber=lower --realtime"
   enabled: true
   environment: scrapers
   triggers:
@@ -23,7 +23,7 @@ MA-scrape-full-lower:
 
 MA-scrape-full-upper:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update ma bills chamber=upper"
+  entrypoint: "poetry run os-update ma bills chamber=upper --realtime"
   enabled: true
   environment: scrapers
   triggers:
