@@ -50,5 +50,5 @@ scrapers:
   - variable: AWS_SECRET_ACCESS_KEY
     paramstore: /bobsled/backups/AWS_SECRET_ACCESS_KEY
   - variable: S3_REALTIME_BASE
-    string: s3://openstates-realtime-bills
+    string: "s3://openstates-realtime-bills/"
     masked: false
