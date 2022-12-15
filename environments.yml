@@ -30,24 +30,24 @@ commands:
 
 scrapers:
   - variable: AR_FTP_PASSWORD
-    paramstore: /bobsled/scrapers/AR_FTP_PASSWORD 
+    paramstore: /bobsled/scrapers/AR_FTP_PASSWORD
   - variable: AR_FTP_USER
     paramstore: /bobsled/scrapers/AR_FTP_USER
   - variable: DATABASE_URL
-    paramstore: /bobsled/scrapers/DATABASE_URL 
+    paramstore: /bobsled/scrapers/DATABASE_URL
   - variable: INDIANA_API_KEY
     paramstore: /bobsled/scrapers/INDIANA_API_KEY
   - variable: VIRGINIA_FTP_PASSWORD
-    paramstore: /bobsled/scrapers/VIRGINIA_FTP_PASSWORD 
+    paramstore: /bobsled/scrapers/VIRGINIA_FTP_PASSWORD
   - variable: VIRGINIA_FTP_USER
     paramstore: /bobsled/scrapers/VIRGINIA_FTP_USER
   - variable: NEW_YORK_API_KEY
-    paramstore: /bobsled/scrapers/NEW_YORK_API_KEY 
+    paramstore: /bobsled/scrapers/NEW_YORK_API_KEY
   - variable: DC_API_KEY
     paramstore: /bobsled/scrapers/DC_API_KEY
   - variable: AWS_ACCESS_KEY_ID
     paramstore: /bobsled/scrapers/AWS_ACCESS_KEY_ID
-  - variable: AWS_ACCESS_KEY_ID
-    paramstore: /bobsled/scrapers/AWS_ACCESS_KEY_ID
+  - variable: AWS_SECRET_ACCESS_KEY
+    paramstore: /bobsled/scrapers/AWS_SECRET_ACCESS_KEY
   - variable: S3_REALTIME_BASE
     string: s3://openstates-realtime-bills
