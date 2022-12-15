@@ -1,6 +1,6 @@
 MA-scrape:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update ma bills sort=latest page_limit=20"
+  entrypoint: "poetry run os-update ma bills sort=latest page_limit=20 --realtime"
   enabled: true
   environment: scrapers
   triggers:

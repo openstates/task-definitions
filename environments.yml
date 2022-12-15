@@ -45,3 +45,9 @@ scrapers:
     paramstore: /bobsled/scrapers/NEW_YORK_API_KEY 
   - variable: DC_API_KEY
     paramstore: /bobsled/scrapers/DC_API_KEY
+  - variable: AWS_ACCESS_KEY_ID
+    paramstore: /bobsled/scrapers/AWS_ACCESS_KEY_ID
+  - variable: AWS_ACCESS_KEY_ID
+    paramstore: /bobsled/scrapers/AWS_ACCESS_KEY_ID
+  - variable: S3_REALTIME_BASE
+    string: s3://openstates-realtime-bills
