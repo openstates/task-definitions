@@ -1,6 +1,6 @@
 MA-scrape:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update ma bills sort=latest page_limit=20 --realtime"
+  entrypoint: "poetry run os-update ma bills sort=latest page_limit=20"
   enabled: true
   environment: scrapers
   triggers:
@@ -12,7 +12,7 @@ MA-scrape:
 
 MA-scrape-full-lower:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update ma bills chamber=lower --realtime"
+  entrypoint: "poetry run os-update ma bills chamber=lower"
   enabled: true
   environment: scrapers
   triggers:
@@ -23,7 +23,7 @@ MA-scrape-full-lower:
 
 MA-scrape-full-upper:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update ma bills chamber=upper --realtime"
+  entrypoint: "poetry run os-update ma bills chamber=upper"
   enabled: true
   environment: scrapers
   triggers:
