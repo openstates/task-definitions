@@ -53,3 +53,10 @@ scrapers:
     masked: false
   - variable: STATS_JWT_SECRET
     paramstore: /bobsled/scrapers/STATS_JWT_SECRET
+  - variable: AWS_ACCESS_KEY_ID
+    paramstore: /bobsled/backups/AWS_ACCESS_KEY_ID
+  - variable: AWS_SECRET_ACCESS_KEY
+    paramstore: /bobsled/backups/AWS_SECRET_ACCESS_KEY
+  - variable: S3_REALTIME_BASE
+    string: "s3://openstates-realtime-bills/"
+    masked: false
