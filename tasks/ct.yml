@@ -15,3 +15,12 @@ CT-text:
   entrypoint: "poetry run os-text-extract update ct"
   enabled: true
   environment: scrapers
+
+CT-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update ct events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 30 0 * * ?
+  timeout_minutes: 60
