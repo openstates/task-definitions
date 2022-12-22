@@ -46,7 +46,7 @@ scrapers:
   - variable: DC_API_KEY
     paramstore: /bobsled/scrapers/DC_API_KEY
   - variable: STATS_ENDPOINT
-    string: "https://metrics.civiceagle.com"
+    string: "https://metrics.civiceagle.com/statsd"
   - variable: STATS_ENABLED
     string: "True"
     masked: false
