@@ -15,3 +15,13 @@ NY-text:
   entrypoint: "poetry run os-text-extract update ny"
   enabled: true
   environment: scrapers
+
+NY-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update ny events"
+  enabled: true
+  environment: scrapers
+  memory: 1024
+  triggers:
+    - cron: 25 3 * * ?
+  timeout_minutes: 60
