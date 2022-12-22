@@ -15,3 +15,12 @@ WV-text:
   entrypoint: "poetry run os-text-extract update wv"
   enabled: true
   environment: scrapers
+
+WV-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update wv events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 35 4 * * ?
+  timeout_minutes: 360
