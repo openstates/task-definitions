@@ -15,3 +15,12 @@ AL-text:
   entrypoint: "poetry run os-text-extract update al"
   enabled: true
   environment: scrapers
+
+AL-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update al events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 15 5 * * ?
+  timeout_minutes: 60
