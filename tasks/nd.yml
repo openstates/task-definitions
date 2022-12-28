@@ -15,3 +15,12 @@ ND-text:
   entrypoint: "poetry run os-text-extract update nd"
   enabled: true
   environment: scrapers
+
+ND-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update nd events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 10 9 * * ?
+  timeout_minutes: 60
