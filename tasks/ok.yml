@@ -16,7 +16,7 @@ OK-text:
   enabled: true
   environment: scrapers
 
-OK-scrape:
+OK-events:
   image: openstates/scrapers
   entrypoint: "poetry run os-update ok events"
   enabled: true
