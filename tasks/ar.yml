@@ -15,3 +15,12 @@ AR-text:
   entrypoint: "poetry run os-text-extract update ar"
   enabled: true
   environment: scrapers
+
+AR-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update ar events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 0 5 * * ?
+  timeout_minutes: 60

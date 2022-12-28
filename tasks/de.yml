@@ -16,3 +16,12 @@ DE-text:
   entrypoint: "poetry run os-text-extract update de"
   enabled: true
   environment: scrapers
+
+DE-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update de events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 5 5 * * ?
+  timeout_minutes: 60

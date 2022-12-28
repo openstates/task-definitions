@@ -15,3 +15,12 @@ KS-text:
   entrypoint: "poetry run os-text-extract update ks"
   enabled: true
   environment: scrapers
+
+KS-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update ks events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 35 5 * * ?
+  timeout_minutes: 60

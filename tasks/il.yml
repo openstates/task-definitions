@@ -16,3 +16,12 @@ IL-text:
   entrypoint: "poetry run os-text-extract update il"
   enabled: true
   environment: scrapers
+
+IL-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update il events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 25 5 * * ?
+  timeout_minutes: 60
