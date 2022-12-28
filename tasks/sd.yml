@@ -15,3 +15,12 @@ SD-text:
   entrypoint: "poetry run os-text-extract update sd"
   enabled: true
   environment: scrapers
+
+SD-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update sd events"
+  enabled: true
+  environment: scrapers
+  triggers:
+     - cron: 50 12 * * ?
+  timeout_minutes: 60

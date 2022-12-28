@@ -15,3 +15,12 @@ OK-text:
   entrypoint: "poetry run os-text-extract update ok"
   enabled: true
   environment: scrapers
+
+OK-scrape:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update ok events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 10 12 * * ?
+  timeout_minutes: 60
