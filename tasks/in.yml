@@ -4,7 +4,7 @@ IN-scrape:
   enabled: true
   environment: scrapers
   triggers:
-   - cron: 0 */8 * * ?
+    - cron: 0 */8 * * ?
 #     - cron: 0 6 * * ?
   timeout_minutes: 720
   next_tasks:
@@ -22,5 +22,5 @@ IN-events:
   enabled: true
   environment: scrapers
   triggers:
-   - cron: 40 5 * * ?
+    - cron: 40 5 * * ?
   timeout_minutes: 60
