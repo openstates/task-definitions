@@ -14,3 +14,12 @@ MT-text:
   entrypoint: "poetry run os-text-extract update mt"
   enabled: true
   environment: scrapers
+
+MT-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update mt events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 5 1 * * ?
+  timeout_minutes: 60

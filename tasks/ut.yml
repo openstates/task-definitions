@@ -4,8 +4,8 @@ UT-scrape:
   enabled: true
   environment: scrapers
   triggers:
-#    - cron: 0 */6 * * ?
-    - cron: 0 8 * * ?
+    - cron: 0 */6 * * ?
+#    - cron: 0 8 * * ?
   timeout_minutes: 360
   next_tasks:
     - UT-text
@@ -15,3 +15,12 @@ UT-text:
   entrypoint: "poetry run os-text-extract update ut"
   enabled: true
   environment: scrapers
+
+UT-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update ut events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 50 2 * * ?
+  timeout_minutes: 360

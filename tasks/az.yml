@@ -4,8 +4,8 @@ AZ-scrape:
   enabled: true
   environment: scrapers
   triggers:
-#    - cron: 0 */2 * * ?
-    - cron: 0 7 * * ?
+    - cron: 0 */2 * * ?
+#    - cron: 0 7 * * ?
   timeout_minutes: 720
   next_tasks:
     - AZ-text
@@ -15,3 +15,12 @@ AZ-text:
   entrypoint: "poetry run os-text-extract update az"
   enabled: true
   environment: scrapers
+
+AZ-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update az events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 12 0 * * ?
+  timeout_minutes: 60

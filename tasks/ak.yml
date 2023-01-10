@@ -15,3 +15,12 @@ AK-text:
   entrypoint: "poetry run os-text-extract update ak"
   enabled: true
   environment: scrapers
+
+AK-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update ak events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 3 2 * * ?
+  timeout_minutes: 60

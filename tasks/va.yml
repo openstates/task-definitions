@@ -15,3 +15,13 @@ VA-text:
   entrypoint: "poetry run os-text-extract update va"
   enabled: true
   environment: scrapers
+
+VA-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update va events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    # VA fails if run between ~4 and 7am?
+    - cron: 10 0 * * ?
+  timeout_minutes: 60

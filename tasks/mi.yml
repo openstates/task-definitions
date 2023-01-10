@@ -16,3 +16,12 @@ MI-text:
   entrypoint: "poetry run os-text-extract update mi"
   enabled: true
   environment: scrapers
+
+MI-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update mi events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 30 6 * * ?
+  timeout_minutes: 60

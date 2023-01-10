@@ -4,8 +4,8 @@ MA-scrape:
   enabled: true
   environment: scrapers
   triggers:
-#    - cron: 0 */6 * * ?
-    - cron: 0 5 * * ?
+    - cron: 0 */6 * * ?
+#    - cron: 0 5 * * ?
   timeout_minutes: 2160  # 36 hours :(
   next_tasks:
     - MA-text
@@ -37,3 +37,12 @@ MA-text:
   entrypoint: "poetry run os-text-extract update ma"
   enabled: true
   environment: scrapers
+
+MA-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update ma events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 15 6 * * ?
+  timeout_minutes: 60

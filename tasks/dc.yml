@@ -15,3 +15,12 @@ DC-text:
   entrypoint: "poetry run os-text-extract update dc"
   enabled: true
   environment: scrapers
+
+DC-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update dc events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 10 5 * * ?
+  timeout_minutes: 60
