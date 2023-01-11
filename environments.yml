@@ -56,6 +56,10 @@ scrapers:
     paramstore: /bobsled/backups/AWS_ACCESS_KEY_ID
   - variable: AWS_SECRET_ACCESS_KEY
     paramstore: /bobsled/backups/AWS_SECRET_ACCESS_KEY
+  - variable: AWS_DEFAULT_REGION
+    string: "us-east-1"
   - variable: S3_REALTIME_BASE
-    string: "s3://openstates-realtime-bills/"
+    string: "s3://openstates-realtime-bills"
     masked: false
+  - variable: SQS_QUEUE_URL
+    paramstore: /bobsled/backups/SQS_QUEUE_URL
