@@ -25,3 +25,12 @@ IL-events:
   triggers:
     - cron: 25 5 * * ?
   timeout_minutes: 60
+  
+IL-committees:
+  image: openstates/scrapers
+  entrypoint: "poetry run spatula scrape scrapers_next.il.committees"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 0 2 * * 0 
+  timeout_minutes: 60
