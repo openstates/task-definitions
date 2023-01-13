@@ -1,6 +1,6 @@
 VT-scrape:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update vt bills"
+  entrypoint: "poetry run os-update vt bills --realtime"
   enabled: true
   environment: scrapers
   triggers:
