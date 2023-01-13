@@ -1,6 +1,6 @@
 ME-scrape:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update me bills"
+  entrypoint: "poetry run os-update me bills --realtime"
   enabled: true
   environment: scrapers
   triggers:
