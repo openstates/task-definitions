@@ -1,6 +1,6 @@
 NY-scrape:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update ny bills"
+  entrypoint: "poetry run os-update ny bills --realtime"
   enabled: true
   environment: scrapers
   memory: 1024
