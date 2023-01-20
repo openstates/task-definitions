@@ -4,7 +4,7 @@ NE-scrape:
   enabled: true
   environment: scrapers
   triggers:
-    - cron: 0 */2 * * ?
+    - cron: 0 */2 * * *
 #    - cron: 0 7 * * ?
   timeout_minutes: 360
   next_tasks:
@@ -22,5 +22,5 @@ NE-events:
   enabled: true
   environment: scrapers
   triggers:
-    - cron: 0 9 * * ?
+    - cron: 0 9 * * *
   timeout_minutes: 60
