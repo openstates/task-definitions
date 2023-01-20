@@ -1,11 +1,11 @@
 WA-scrape:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update wa bills"
+  entrypoint: "poetry run os-update wa bills --realtime"
   enabled: true
   environment: scrapers
   triggers:
-#    - cron: 0 */6 * * ?
-    - cron: 0 8 * * ?
+    - cron: 0 */6 * * ?
+#    - cron: 0 8 * * ?
   timeout_minutes: 480
   next_tasks:
     - WA-text
@@ -15,3 +15,12 @@ WA-text:
   entrypoint: "poetry run os-text-extract update wa"
   enabled: true
   environment: scrapers
+
+WA-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update wa events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 50 2 * * ?
+  timeout_minutes: 60

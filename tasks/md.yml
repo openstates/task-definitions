@@ -1,11 +1,12 @@
 MD-scrape:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update md bills votes"
+  # entrypoint: "poetry run os-update md bills votes" temporarily disabled votes because no votes for prefiles yet
+  entrypoint: "poetry run os-update md bills"
   enabled: true
   environment: scrapers
   triggers:
-#    - cron: 0 */6 * * ?
-    - cron: 0 4 * * ?
+    - cron: 0 */6 * * ?
+#    - cron: 0 4 * * ?
   timeout_minutes: 360
   next_tasks:
     - MD-text
@@ -15,3 +16,12 @@ MD-text:
   entrypoint: "poetry run os-text-extract update md"
   enabled: true
   environment: scrapers
+
+MD-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update md events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 5 3 * * ?
+  timeout_minutes: 60

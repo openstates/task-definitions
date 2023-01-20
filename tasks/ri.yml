@@ -4,8 +4,8 @@ RI-scrape:
   enabled: true
   environment: scrapers
   triggers:
-#    - cron: 0 */6 * * ?
-    - cron: 0 5 * * ?
+    - cron: 0 */6 * * ?
+#    - cron: 0 5 * * ?
   timeout_minutes: 360
   next_tasks:
     - RI-text
@@ -15,3 +15,12 @@ RI-text:
   entrypoint: "poetry run os-text-extract update ri"
   enabled: true
   environment: scrapers
+
+RI-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update ri events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 30 12 * * ?
+  timeout_minutes: 60

@@ -4,8 +4,8 @@ FL-scrape:
   enabled: true
   environment: scrapers
   triggers:
-#    - cron: 0 */6 * * ?
-    - cron: 0 5 * * ?
+    - cron: 0 */6 * * ?
+#    - cron: 0 5 * * ?
   timeout_minutes: 720
   next_tasks:
     - FL-text
@@ -15,3 +15,12 @@ FL-text:
   entrypoint: "poetry run os-text-extract update fl"
   enabled: true
   environment: scrapers
+
+FL-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update fl events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 20 2 * * ?
+  timeout_minutes: 60

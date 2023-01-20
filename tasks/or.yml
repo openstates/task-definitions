@@ -4,8 +4,8 @@ OR-scrape:
   enabled: true
   environment: scrapers
   triggers:
-#    - cron: 0 */2 * * ?
-    - cron: 0 8 * * ?
+    - cron: 0 */2 * * ?
+#    - cron: 0 8 * * ?
   timeout_minutes: 360
   next_tasks:
     - OR-text
@@ -15,3 +15,12 @@ OR-text:
   entrypoint: "poetry run os-text-extract update or"
   enabled: true
   environment: scrapers
+
+OR-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update or events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 45 3 * * ?
+  timeout_minutes: 60

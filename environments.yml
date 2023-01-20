@@ -29,15 +29,36 @@ commands:
     masked: false
 
 scrapers:
+  - variable: AR_FTP_PASSWORD
+    paramstore: /bobsled/scrapers/AR_FTP_PASSWORD
+  - variable: AR_FTP_USER
+    paramstore: /bobsled/scrapers/AR_FTP_USER
   - variable: DATABASE_URL
-    paramstore: /bobsled/scrapers/DATABASE_URL 
+    paramstore: /bobsled/scrapers/DATABASE_URL
   - variable: INDIANA_API_KEY
     paramstore: /bobsled/scrapers/INDIANA_API_KEY
   - variable: VIRGINIA_FTP_PASSWORD
-    paramstore: /bobsled/scrapers/VIRGINIA_FTP_PASSWORD 
+    paramstore: /bobsled/scrapers/VIRGINIA_FTP_PASSWORD
   - variable: VIRGINIA_FTP_USER
     paramstore: /bobsled/scrapers/VIRGINIA_FTP_USER
   - variable: NEW_YORK_API_KEY
-    paramstore: /bobsled/scrapers/NEW_YORK_API_KEY 
+    paramstore: /bobsled/scrapers/NEW_YORK_API_KEY
   - variable: DC_API_KEY
     paramstore: /bobsled/scrapers/DC_API_KEY
+  - variable: STATS_ENDPOINT
+    string: "https://metrics.civiceagle.com/statsd"
+  - variable: STATS_ENABLED
+    string: "True"
+    masked: false
+  - variable: STATS_JWT_SECRET
+    paramstore: /bobsled/scrapers/STATS_JWT_SECRET
+  - variable: AWS_ACCESS_KEY_ID
+    paramstore: /bobsled/scrapers/AWS_ACCESS_KEY_ID
+  - variable: AWS_SECRET_ACCESS_KEY
+    paramstore: /bobsled/scrapers/AWS_SECRET_ACCESS_KEY
+  - variable: AWS_DEFAULT_REGION
+    string: "us-east-1"
+  - variable: S3_REALTIME_BASE
+    string: "s3://openstates-realtime-bills"
+  - variable: SQS_QUEUE_URL
+    string: "https://sqs.us-east-1.amazonaws.com/189670762819/openstates-realtime-bills"

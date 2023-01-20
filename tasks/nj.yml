@@ -4,7 +4,7 @@ NJ-scrape:
   enabled: true
   environment: scrapers
   triggers:
-    - cron: 0 */6 * * ?
+    - cron: 0 */4 * * ?
 #    - cron: 0 4 * * ?
   timeout_minutes: 360
   next_tasks:
@@ -15,3 +15,12 @@ NJ-text:
   entrypoint: "poetry run os-text-extract update nj"
   enabled: true
   environment: scrapers
+
+NJ-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update nj events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 30 9 * * ?
+  timeout_minutes: 60

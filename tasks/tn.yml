@@ -1,12 +1,12 @@
 TN-scrape:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update tn bills"
+  entrypoint: "poetry run os-update tn bills --realtime"
   enabled: true
   memory: 1024
   environment: scrapers
   triggers:
-#    - cron: 0 */6 * * ?
-    - cron: 0 5 * * ?
+    - cron: 0 */6 * * ?
+#    - cron: 0 5 * * ?
   timeout_minutes: 360
   next_tasks:
     - TN-text
@@ -16,3 +16,12 @@ TN-text:
   entrypoint: "poetry run os-text-extract update tn"
   enabled: true
   environment: scrapers
+
+TN-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update tn events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 0 13 * * ?
+  timeout_minutes: 60

@@ -4,8 +4,8 @@ SD-scrape:
   enabled: true
   environment: scrapers
   triggers:
-#    - cron: 0 */6 * * ?
-     - cron: 0 7 * * ?
+    - cron: 0 */6 * * ?
+#    - cron: 0 7 * * ?
   timeout_minutes: 360
   next_tasks:
     - SD-text
@@ -15,3 +15,12 @@ SD-text:
   entrypoint: "poetry run os-text-extract update sd"
   enabled: true
   environment: scrapers
+
+SD-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update sd events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 50 12 * * ?
+  timeout_minutes: 60

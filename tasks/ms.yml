@@ -4,8 +4,8 @@ MS-scrape:
   enabled: true
   environment: scrapers
   triggers:
-#    - cron: 0 */6 * * ?
-    - cron: 0 6 * * ?
+    - cron: 0 */6 * * ?
+#    - cron: 0 6 * * ?
   timeout_minutes: 360
   next_tasks:
     - MS-text
@@ -15,3 +15,12 @@ MS-text:
   entrypoint: "poetry run os-text-extract update ms"
   enabled: true
   environment: scrapers
+
+MS-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update ms events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 50 6 * * ?
+  timeout_minutes: 60

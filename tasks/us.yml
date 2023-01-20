@@ -1,6 +1,6 @@
 US-scrape:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update usa bills"
+  entrypoint: "poetry run os-update usa bills --realtime"
   enabled: true
   environment: scrapers
   triggers:
@@ -14,3 +14,12 @@ US-scrape:
   # entrypoint: "poetry run os-text-extract update usa"
   # enabled: true
   # environment: scrapers
+
+US-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update usa events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 50 1 * * ?
+  timeout_minutes: 60

@@ -1,12 +1,12 @@
 MN-scrape:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update mn bills"
+  entrypoint: "poetry run os-update mn bills --realtime"
   enabled: true
   environment: scrapers
   triggers:
-#    - cron: 0 */5 * * *
+    - cron: 0 */2 * * *
 #    - cron: 0 1,8,11,17 * * ?
-    - cron: 0 7 * * ?
+#   - cron: 0 7 * * ?
   timeout_minutes: 360
   next_tasks:
     - MN-text

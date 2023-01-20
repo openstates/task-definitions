@@ -1,6 +1,6 @@
 PA-scrape:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update pa bills"
+  entrypoint: "poetry run os-update pa bills --realtime"
   enabled: true
   memory: 1024
   environment: scrapers
@@ -16,3 +16,12 @@ PA-text:
   entrypoint: "poetry run os-text-extract update pa"
   enabled: true
   environment: scrapers
+
+PA-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update pa events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 20 12 * * ?
+  timeout_minutes: 60

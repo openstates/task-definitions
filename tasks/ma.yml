@@ -1,18 +1,18 @@
 MA-scrape:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update ma bills sort=latest page_limit=20"
+  entrypoint: "poetry run os-update ma bills --realtime sort=latest page_limit=20"
   enabled: true
   environment: scrapers
   triggers:
-#    - cron: 0 */6 * * ?
-    - cron: 0 5 * * ?
+    - cron: 0 */6 * * ?
+#    - cron: 0 5 * * ?
   timeout_minutes: 2160  # 36 hours :(
   next_tasks:
     - MA-text
 
 MA-scrape-full-lower:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update ma bills chamber=lower"
+  entrypoint: "poetry run os-update ma bills --realtime chamber=lower"
   enabled: true
   environment: scrapers
   triggers:
@@ -23,7 +23,7 @@ MA-scrape-full-lower:
 
 MA-scrape-full-upper:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update ma bills chamber=upper"
+  entrypoint: "poetry run os-update ma bills --realtime chamber=upper"
   enabled: true
   environment: scrapers
   triggers:
@@ -37,3 +37,12 @@ MA-text:
   entrypoint: "poetry run os-text-extract update ma"
   enabled: true
   environment: scrapers
+
+MA-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update ma events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 15 6 * * ?
+  timeout_minutes: 60

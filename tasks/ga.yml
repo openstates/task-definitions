@@ -4,20 +4,20 @@ GA-scrape:
   enabled: true
   environment: scrapers
   triggers:
-#    - cron: 0 */3 * * ?
-    - cron: 0 5 * * ?
+    - cron: 0 */3 * * ?
+#    - cron: 0 5 * * ?
   timeout_minutes: 480
   next_tasks:
     - GA-text
 
-# GA-events:
-#   image: openstates/scrapers
-#   entrypoint: "poetry run os-update ga events"
-#   enabled: true
-#   environment: scrapers
-#   triggers:
-#     - cron: 20 8,17 * * ?
-#   timeout_minutes: 60
+GA-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update ga events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 20 8,17 * * ?
+  timeout_minutes: 60
 
 GA-text:
   image: openstates/core

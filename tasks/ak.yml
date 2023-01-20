@@ -4,8 +4,8 @@ AK-scrape:
   enabled: true
   environment: scrapers
   triggers:
-#    - cron: 0 */6 * * ?
-    - cron: 0 8 * * ?
+    - cron: 0 */6 * * ?
+#    - cron: 0 8 * * ?
   timeout_minutes: 360
   next_tasks:
     - AK-text
@@ -15,3 +15,12 @@ AK-text:
   entrypoint: "poetry run os-text-extract update ak"
   enabled: true
   environment: scrapers
+
+AK-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update ak events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 3 2 * * ?
+  timeout_minutes: 60

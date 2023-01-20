@@ -15,3 +15,12 @@ LA-text:
   entrypoint: "poetry run os-text-extract update la"
   enabled: true
   environment: scrapers
+
+LA-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update la events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 10 6 * * ?
+  timeout_minutes: 60

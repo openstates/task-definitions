@@ -4,8 +4,8 @@ IN-scrape:
   enabled: true
   environment: scrapers
   triggers:
-#   - cron: 0 */8 * * ?
-     - cron: 0 6 * * ?
+    - cron: 0 */8 * * ?
+#     - cron: 0 6 * * ?
   timeout_minutes: 720
   next_tasks:
     - IN-text
@@ -15,3 +15,12 @@ IN-text:
   entrypoint: "poetry run os-text-extract update in"
   enabled: true
   environment: scrapers
+
+IN-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update in events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 40 5 * * ?
+  timeout_minutes: 60

@@ -1,11 +1,11 @@
 SC-scrape:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update sc bills"
+  entrypoint: "poetry run os-update sc bills --realtime"
   enabled: true
   environment: scrapers
   triggers:
-#    - cron: 0 */6 * * ?
-    - cron: 0 4 * * ?
+    - cron: 0 */6 * * ?
+#    - cron: 0 4 * * ?
   timeout_minutes: 1200
   next_tasks:
     - SC-text
@@ -15,3 +15,12 @@ SC-text:
   entrypoint: "poetry run os-text-extract update sc"
   enabled: true
   environment: scrapers
+
+SC-events:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update sc events"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 40 12 * * ?
+  timeout_minutes: 60
