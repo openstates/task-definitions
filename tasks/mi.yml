@@ -4,7 +4,7 @@ MI-scrape:
   enabled: true
   environment: scrapers
   triggers:
-    - cron: 0 */6 * * ?
+    - cron: 36 */3 * * ?
 #    - cron: 0 6 * * ?
   timeout_minutes: 360
   memory: 1024
