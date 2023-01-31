@@ -5,7 +5,7 @@ PA-scrape:
   memory: 1024
   environment: scrapers
   triggers:
-    - cron: 0 */6 * * ?
+    - cron: 0 */4 * * ?
 #    - cron: 0 5 * * ?
   timeout_minutes: 1080 # 18 hours to be safe :(
   next_tasks:
