@@ -1,6 +1,6 @@
 CA-scrape:
   image: openstates/scrapers-california
-  entrypoint: [sh, -c, 'sed -i "s/user                    = mysql/user                    = root/" /etc/mysql/mariadb.conf.d/50-server.cnf && mysql_install_db --user=root && mkdir /run/mysqld && mysqld --user root --max_allowed_packet=512M & /opt/openstates/openstates/scrapers/ca/download.sh && poetry run os-update ca bills']
+  entrypoint: "/ca-entrypoint.sh bills"
   enabled: true
   environment: scrapers
   triggers:
@@ -19,7 +19,7 @@ CA-text:
 
 CA-events:
   image: openstates/scrapers-california
-  entrypoint: [sh, -c, 'sed -i "s/user                    = mysql/user                    = root/" /etc/mysql/mariadb.conf.d/50-server.cnf && mysql_install_db --user=root && mkdir /run/mysqld && mysqld --user root --max_allowed_packet=512M & /opt/openstates/openstates/scrapers/ca/download.sh && poetry run os-update ca events']
+  entrypoint: "/ca-entrypoint.sh bills"
   enabled: true
   environment: scrapers
   triggers:
