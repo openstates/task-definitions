@@ -19,7 +19,7 @@ CA-text:
 
 CA-events:
   image: openstates/scrapers-california
-  entrypoint: "/ca-entrypoint.sh bills"
+  entrypoint: "/ca-entrypoint.sh events"
   enabled: true
   environment: scrapers
   triggers:
