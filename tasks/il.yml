@@ -1,13 +1,13 @@
 IL-scrape:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update il bills"
+  entrypoint: "poetry run os-update il bills --realtime"
   enabled: true
   environment: scrapers
   memory: 1024
   triggers:
     - cron: 0 */6 * * ?
 #    - cron: 0 6 * * ?
-  timeout_minutes: 1080 # regularly 12 hours, 18 to be safe
+  timeout_minutes: 2160 # regularly 12 hours, 36 hours to be safe :(
   next_tasks:
     - IL-text
 
