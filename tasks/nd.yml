@@ -4,8 +4,8 @@ ND-scrape:
   enabled: true
   environment: scrapers
   triggers:
-    - cron: 16 */8 * * ?
-#    - cron: 0 7 * * ?
+#    - cron: 16 */8 * * ?
+    - cron: 0 7 * * ?
   timeout_minutes: 360
   next_tasks:
     - ND-text
