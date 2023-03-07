@@ -6,7 +6,7 @@ MA-scrape:
   triggers:
     - cron: 0 */6 * * ?
 #    - cron: 0 5 * * ?
-  timeout_minutes: 2880  # 48 hours :(
+  timeout_minutes: 3840  # 64 hours :(
   next_tasks:
     - MA-text
 
