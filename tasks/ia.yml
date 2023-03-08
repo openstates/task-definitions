@@ -18,7 +18,7 @@ IA-text:
 
 IA-events:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update ia bills events"
+  entrypoint: "poetry run os-update ia events"
   enabled: true
   environment: scrapers
   triggers:
