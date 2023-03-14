@@ -23,4 +23,4 @@ IN-events:
   environment: scrapers
   triggers:
     - cron: 40 5 * * ?
-  timeout_minutes: 60
+  timeout_minutes: 360
