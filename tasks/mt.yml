@@ -5,7 +5,7 @@ MT-scrape:
   environment: scrapers
   triggers:
     - cron: 0 7,22 * * ?
-  timeout_minutes: 360
+  timeout_minutes: 510
   next_tasks:
     - MT-text
 
