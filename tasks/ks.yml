@@ -5,7 +5,7 @@ KS-scrape:
   environment: scrapers
   triggers:
 #    - cron: 0 7,10,1,18 * * ?
-    - cron: 0 7 * * ?
+    - cron: 35 7 * * ?
   timeout_minutes: 360
   next_tasks:
     - KS-text
