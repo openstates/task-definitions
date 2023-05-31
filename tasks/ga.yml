@@ -4,8 +4,8 @@ GA-scrape:
   enabled: true
   environment: scrapers
   triggers:
-    - cron: 0 */3 * * ?
-#    - cron: 0 5 * * ?
+#    - cron: 0 */3 * * ?
+    - cron: 0 5 * * ?
   timeout_minutes: 480
   next_tasks:
     - GA-text
