@@ -4,8 +4,8 @@ HI-scrape:
   enabled: true
   environment: scrapers
   triggers:
-    - cron: 50 */4 * * ?
-#    - cron: 0 9 * * ?
+#    - cron: 50 */4 * * ?
+    - cron: 0 9 * * ?
   timeout_minutes: 360
   next_tasks:
     - HI-text
