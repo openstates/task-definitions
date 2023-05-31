@@ -4,8 +4,8 @@ MS-scrape:
   enabled: true
   environment: scrapers
   triggers:
-    - cron: 52 */4 * * ?
-#    - cron: 0 6 * * ?
+#    - cron: 52 */4 * * ?
+    - cron: 50 6 * * ?
   timeout_minutes: 360
   next_tasks:
     - MS-text

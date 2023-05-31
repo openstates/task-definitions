@@ -4,8 +4,8 @@ WV-scrape:
   enabled: true
   environment: scrapers
   triggers:
-    - cron: 28 */4 * * ?
-#    - cron: 0 5 * * ?
+#    - cron: 28 */4 * * ?
+    - cron: 0 5 * * ?
   timeout_minutes: 360
   next_tasks:
     - WV-text

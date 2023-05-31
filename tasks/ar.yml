@@ -4,8 +4,8 @@ AR-scrape:
   enabled: true
   environment: scrapers
   triggers:
-    - cron: 20 */4 * * ?
-#    - cron: 0 6 * * ?
+#    - cron: 20 */4 * * ?
+    - cron: 0 6 * * ?
   timeout_minutes: 360
   next_tasks:
     - AR-text

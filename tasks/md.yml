@@ -5,8 +5,8 @@ MD-scrape:
   enabled: true
   environment: scrapers
   triggers:
-    - cron: 46 */4 * * ?
-#    - cron: 0 4 * * ?
+#    - cron: 46 */4 * * ?
+    - cron: 0 4 * * ?
   timeout_minutes: 360
   next_tasks:
     - MD-text
