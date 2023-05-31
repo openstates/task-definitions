@@ -5,7 +5,8 @@ VA-scrape:
   environment: scrapers
   triggers:
     # VA fails if run between ~4 and 7am?
-    - cron: 0 0,9,18 * * ?
+#    - cron: 0 0,9,18 * * ?
+    - cron: 0 0 * * ?
   timeout_minutes: 360
   next_tasks:
     - VA-text
