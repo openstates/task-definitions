@@ -6,14 +6,14 @@ US-scrape:
   triggers:
     - cron: 0 8 * * ?
   timeout_minutes: 720
-  # next_tasks:
-  #   - US-text
+  next_tasks:
+    - US-text
 
-# US-text:
-  # image: openstates/core
-  # entrypoint: "poetry run os-text-extract update usa"
-  # enabled: true
-  # environment: scrapers
+US-text:
+  image: openstates/core
+  entrypoint: "poetry run os-text-extract update usa"
+  enabled: true
+  environment: scrapers
 
 US-events:
   image: openstates/scrapers
