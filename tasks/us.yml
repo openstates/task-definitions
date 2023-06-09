@@ -11,7 +11,7 @@ US-scrape:
 
 US-text:
   image: openstates/core
-  entrypoint: "poetry run os-text-extract update usa"
+  entrypoint: "poetry run os-text-extract update us"
   enabled: true
   environment: scrapers
 
