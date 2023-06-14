@@ -16,7 +16,7 @@ SC-2021-2022-scrape:
   enabled: true
   environment: scrapers
   triggers:
-    - cron: 0 19 * * 2
+    - cron: 0 18 * * 3
   timeout_minutes: 1200
 
 SC-2019-2020-scrape:
@@ -25,7 +25,7 @@ SC-2019-2020-scrape:
   enabled: true
   environment: scrapers
   triggers:
-    - cron: 0 23 * * 2
+    - cron: 0 22 * * 3
   timeout_minutes: 1200
 
 SC-text:
