@@ -10,24 +10,6 @@ SC-scrape:
   next_tasks:
     - SC-text
 
-SC-2021-2022-scrape:
-  image: openstates/scrapers
-  entrypoint: "poetry run os-update sc bills session=2021-2022"
-  enabled: true
-  environment: scrapers
-  triggers:
-    - cron: 0 18 * * 3
-  timeout_minutes: 1200
-
-SC-2019-2020-scrape:
-  image: openstates/scrapers
-  entrypoint: "poetry run os-update sc bills session=2019-2020"
-  enabled: true
-  environment: scrapers
-  triggers:
-    - cron: 0 22 * * 3
-  timeout_minutes: 1200
-
 SC-text:
   image: openstates/core
   entrypoint: "poetry run os-text-extract update sc"
@@ -42,3 +24,22 @@ SC-events:
   triggers:
     - cron: 40 12 * * ?
   timeout_minutes: 60
+
+## Can be commented in to scrape past session bill data, when necessary
+#SC-2021-2022-scrape:
+#  image: openstates/scrapers
+#  entrypoint: "poetry run os-update sc bills session=2021-2022"
+#  enabled: true
+#  environment: scrapers
+#  triggers:
+#    - cron: 0 18 * * 3
+#  timeout_minutes: 1200
+#
+#SC-2019-2020-scrape:
+#  image: openstates/scrapers
+#  entrypoint: "poetry run os-update sc bills session=2019-2020"
+#  enabled: true
+#  environment: scrapers
+#  triggers:
+#    - cron: 0 22 * * 3
+#  timeout_minutes: 1200
