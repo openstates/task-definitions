@@ -1,20 +1,25 @@
-AR-scrape:
-  image: openstates/scrapers
-  entrypoint: "poetry run os-update ar bills"
-  enabled: true
-  environment: scrapers
-  triggers:
-#    - cron: 20 */4 * * ?
-    - cron: 0 6 * * ?
-  timeout_minutes: 360
-  next_tasks:
-    - AR-text
+# Commenting out AR-scrape as it needs to be rewritten and AR is out of session
+#AR-scrape:
+#  image: openstates/scrapers
+#  entrypoint: "poetry run os-update ar bills"
+#  enabled: true
+#  environment: scrapers
+#  triggers:
+##    - cron: 20 */4 * * ?
+#    - cron: 0 6 * * ?
+#  timeout_minutes: 360
+#  next_tasks:
+#    - AR-text
 
 AR-text:
   image: openstates/core
   entrypoint: "poetry run os-text-extract update ar"
   enabled: true
   environment: scrapers
+  # TODO: Remove `triggers` once AR-scrape has been commented back in
+  #  because AR-text is normally triggered by AR-scrape's `next_tasks`
+  triggers:
+    - cron: 0 6 * * ?
 
 AR-events:
   image: openstates/scrapers

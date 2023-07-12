@@ -1,14 +1,16 @@
-MO-scrape:
-  image: openstates/scrapers
-  entrypoint: "poetry run os-update mo bills"
-  enabled: true
-  environment: scrapers
-  triggers:
-#    - cron: 0 */6 * * ?
-    - cron: 40 6 * * ?
-  timeout_minutes: 360
-  next_tasks:
-    - MO-text
+# Commenting out MO-scrape & MO-events as they need to be rewritten
+#  and MO is out of session
+#MO-scrape:
+#  image: openstates/scrapers
+#  entrypoint: "poetry run os-update mo bills"
+#  enabled: true
+#  environment: scrapers
+#  triggers:
+##    - cron: 0 */6 * * ?
+#    - cron: 40 6 * * ?
+#  timeout_minutes: 360
+#  next_tasks:
+#    - MO-text
 
 MO-text:
   image: openstates/core
@@ -16,11 +18,11 @@ MO-text:
   enabled: true
   environment: scrapers
 
-MO-events:
-  image: openstates/scrapers
-  entrypoint: "poetry run os-update mo events"
-  enabled: true
-  environment: scrapers
-  triggers:
-    - cron: 40 6 * * ?
-  timeout_minutes: 60
+#MO-events:
+#  image: openstates/scrapers
+#  entrypoint: "poetry run os-update mo events"
+#  enabled: true
+#  environment: scrapers
+#  triggers:
+#    - cron: 40 6 * * ?
+#  timeout_minutes: 60
