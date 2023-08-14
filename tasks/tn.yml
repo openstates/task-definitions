@@ -5,8 +5,8 @@ TN-scrape:
   memory: 1024
   environment: scrapers
   triggers:
-#    - cron: 23 */4 * * ?
-    - cron: 0 5 * * ?
+    - cron: 23 */4 * * ?
+#    - cron: 0 5 * * ?
   timeout_minutes: 360
   next_tasks:
     - TN-text
