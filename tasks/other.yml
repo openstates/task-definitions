@@ -27,13 +27,13 @@ json-export:
   triggers:
     - cron: 0 23 1 * ?
 
-web-update-bundles:
-  image: openstates/openstates.org:tasks
-  environment: commands
-  enabled: true
-  entrypoint: ['poetry', 'run', './manage.py', 'manage_bundle', 'covid19', '--search', 'coronavirus OR covid', '--name', '"Coronavirus / COVID-19 Legislation"']
-  triggers:
-    - cron: 0 4 * * ?
+#web-update-bundles:
+#  image: openstates/openstates.org:tasks
+#  environment: commands
+#  enabled: true
+#  entrypoint: ['poetry', 'run', './manage.py', 'manage_bundle', 'covid19', '--search', 'coronavirus OR covid', '--name', '"Coronavirus / COVID-19 Legislation"']
+#  triggers:
+#    - cron: 0 4 * * ?
 
 data-quality-report:
   image: openstates/openstates.org:tasks
