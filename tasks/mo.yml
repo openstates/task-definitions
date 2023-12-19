@@ -1,14 +1,14 @@
 MO-scrape:
- image: openstates/scrapers
- entrypoint: "poetry run os-update mo bills"
- enabled: true
- environment: scrapers
- triggers:
-#    - cron: 0 */6 * * ?
-   - cron: 40 6 * * ?
- timeout_minutes: 360
- next_tasks:
-   - MO-text
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update mo bills"
+  enabled: true
+  environment: scrapers
+  triggers:
+   # - cron: 0 */6 * * ?
+    - cron: 40 6 * * ?
+  timeout_minutes: 360
+  next_tasks:
+    - MO-text
 
 MO-text:
   image: openstates/core
