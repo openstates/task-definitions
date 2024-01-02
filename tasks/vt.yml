@@ -4,8 +4,8 @@ VT-scrape:
   enabled: true
   environment: scrapers
   triggers:
-#    - cron: 27 */4 * * ?
-    - cron: 0 5 * * ?
+    - cron: 27 */4 * * ?
+#    - cron: 0 5 * * ?
   timeout_minutes: 480
   next_tasks:
     - VT-text
