@@ -22,7 +22,7 @@ SC-events:
   enabled: true
   environment: scrapers
   triggers:
-    - cron: 40 12 * * ?
+    - cron: 40 */6 * * ?
   timeout_minutes: 60
 
 ## Can be commented in to scrape past session bill data, when necessary

@@ -22,5 +22,5 @@ WA-events:
   enabled: true
   environment: scrapers
   triggers:
-    - cron: 50 2 * * ?
+    - cron: 50 */6 * * ?
   timeout_minutes: 60

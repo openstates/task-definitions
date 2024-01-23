@@ -23,5 +23,5 @@ NY-events:
   environment: scrapers
   memory: 1024
   triggers:
-    - cron: 25 3 * * ?
+    - cron: 25 */6 * * ?
   timeout_minutes: 60

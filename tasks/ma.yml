@@ -44,5 +44,5 @@ MA-events:
   enabled: true
   environment: scrapers
   triggers:
-    - cron: 15 6 * * ?
+    - cron: 15 */6 * * ?
   timeout_minutes: 60

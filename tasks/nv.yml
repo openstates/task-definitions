@@ -22,5 +22,5 @@ NV-events:
   enabled: true
   environment: scrapers
   triggers:
-    - cron: 0 10 * * ?
+    - cron: 0 */6 * * ?
   timeout_minutes: 60

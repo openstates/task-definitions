@@ -22,5 +22,5 @@ ME-events:
   enabled: true
   environment: scrapers
   triggers:
-    - cron: 20 6 * * ?
+    - cron: 20 */6 * * ?
   timeout_minutes: 60

@@ -23,5 +23,5 @@ PA-events:
   enabled: true
   environment: scrapers
   triggers:
-    - cron: 20 12 * * ?
+    - cron: 20 */6 * * ?
   timeout_minutes: 60
