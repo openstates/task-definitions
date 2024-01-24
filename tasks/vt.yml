@@ -22,5 +22,5 @@ VT-events:
   enabled: true
   environment: scrapers
   triggers:
-    - cron: 10 13 * * ?
+    - cron: 10 */6 * * ?
   timeout_minutes: 60

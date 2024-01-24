@@ -23,5 +23,5 @@ IL-events:
   enabled: true
   environment: scrapers
   triggers:
-    - cron: 25 5 * * ?
+    - cron: 25 */6 * * ?
   timeout_minutes: 60
