@@ -6,7 +6,7 @@ OK-scrape:
   triggers:
     - cron: 25 */4 * * ?
 #    - cron: 0 6 * * ?
-  timeout_minutes: 360
+  timeout_minutes: 720
   next_tasks:
     - OK-text
 
