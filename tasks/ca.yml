@@ -19,11 +19,11 @@ CA-text:
 
 CA-events:
   image: openstates/scrapers-california
-  entrypoint: "/ca-entrypoint.sh events"
+  entrypoint: "poetry run os-update ca events_web"
   enabled: true
   environment: scrapers
   triggers:
-    - cron: 30 14 * * ?
+    - cron: 30 */6 * * ?
   memory: 4096
   cpu: 512
   timeout_minutes: 60
