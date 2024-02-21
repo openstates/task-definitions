@@ -1,0 +1,17 @@
+IA-scrape:
+  image: openstates/scrapers
+  entrypoint: "poetry run os-update ia bills votes --realtime"
+  enabled: true
+  environment: scrapers
+  triggers:
+    - cron: 0 3,9,12,18 * * ?
+#    - cron: 0 4 * * ?
+  timeout_minutes: 600
+  next_tasks:
+    - IA-text
+
+IA-text:
+  image: openstates/core
+  entrypoint: "poetry run os-text-extract update ia"
+  enabled: true
+  environment: scrapers
