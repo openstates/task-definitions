@@ -1,7 +1,7 @@
 OH-scrape:
   image: openstates/scrapers
   entrypoint: "poetry run os-update oh bills --realtime"
-  enabled: true
+  enabled: false
   environment: scrapers
   triggers:
     - cron: 40 */2 * * ?
@@ -13,13 +13,13 @@ OH-scrape:
 OH-text:
   image: openstates/core
   entrypoint: "poetry run os-text-extract update oh"
-  enabled: true
+  enabled: false
   environment: scrapers
 
 OH-events:
   image: openstates/scrapers
   entrypoint: "poetry run os-update oh events"
-  enabled: true
+  enabled: false
   environment: scrapers
   triggers:
     - cron: 0 */6 * * ?

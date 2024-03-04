@@ -1,7 +1,7 @@
 ND-scrape:
   image: openstates/scrapers
   entrypoint: "poetry run os-update nd bills votes --realtime"
-  enabled: true
+  enabled: false
   environment: scrapers
   triggers:
 #    - cron: 16 */8 * * ?
@@ -13,13 +13,13 @@ ND-scrape:
 ND-text:
   image: openstates/core
   entrypoint: "poetry run os-text-extract update nd"
-  enabled: true
+  enabled: false
   environment: scrapers
 
 ND-events:
   image: openstates/scrapers
   entrypoint: "poetry run os-update nd events"
-  enabled: true
+  enabled: false
   environment: scrapers
   triggers:
     - cron: 10 */6 * * ?

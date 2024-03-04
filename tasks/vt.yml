@@ -1,7 +1,7 @@
 VT-scrape:
   image: openstates/scrapers
   entrypoint: "poetry run os-update vt bills --realtime"
-  enabled: true
+  enabled: false
   environment: scrapers
   triggers:
     - cron: 27 */4 * * ?
@@ -13,13 +13,13 @@ VT-scrape:
 VT-text:
   image: openstates/core
   entrypoint: "poetry run os-text-extract update vt"
-  enabled: true
+  enabled: false
   environment: scrapers
 
 VT-events:
   image: openstates/scrapers
   entrypoint: "poetry run os-update vt events"
-  enabled: true
+  enabled: false
   environment: scrapers
   triggers:
     - cron: 10 */6 * * ?

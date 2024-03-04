@@ -1,7 +1,7 @@
 OK-scrape:
   image: openstates/scrapers
   entrypoint: "poetry run os-update ok bills --realtime"
-  enabled: true
+  enabled: false
   environment: scrapers
   triggers:
     - cron: 25 */4 * * ?
@@ -13,13 +13,13 @@ OK-scrape:
 OK-text:
   image: openstates/core
   entrypoint: "poetry run os-text-extract update ok"
-  enabled: true
+  enabled: false
   environment: scrapers
 
 OK-events:
   image: openstates/scrapers
   entrypoint: "poetry run os-update ok events"
-  enabled: true
+  enabled: false
   environment: scrapers
   triggers:
     - cron: 10 */6 * * ?

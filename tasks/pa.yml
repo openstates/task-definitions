@@ -1,7 +1,7 @@
 PA-scrape:
   image: openstates/scrapers
   entrypoint: "poetry run os-update pa bills --realtime"
-  enabled: true
+  enabled: false
   memory: 1024
   environment: scrapers
   triggers:
@@ -14,13 +14,13 @@ PA-scrape:
 PA-text:
   image: openstates/core
   entrypoint: "poetry run os-text-extract update pa"
-  enabled: true
+  enabled: false
   environment: scrapers
 
 PA-events:
   image: openstates/scrapers
   entrypoint: "poetry run os-update pa events"
-  enabled: true
+  enabled: false
   environment: scrapers
   triggers:
     - cron: 20 */6 * * ?

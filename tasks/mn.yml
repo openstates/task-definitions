@@ -1,7 +1,7 @@
 MN-scrape:
   image: openstates/scrapers
   entrypoint: "poetry run os-update mn bills votes --realtime"
-  enabled: true
+  enabled: false
   environment: scrapers
   triggers:
     - cron: 0 */4 * * *
@@ -14,7 +14,7 @@ MN-scrape:
 MN-events:
   image: openstates/scrapers
   entrypoint: "poetry run os-update mn events"
-  enabled: true
+  enabled: false
   environment: scrapers
   triggers:
     - cron: 20 */6 * * ?
@@ -23,5 +23,5 @@ MN-events:
 MN-text:
   image: openstates/core
   entrypoint: "poetry run os-text-extract update mn"
-  enabled: true
+  enabled: false
   environment: scrapers
