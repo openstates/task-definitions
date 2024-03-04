@@ -1,7 +1,7 @@
 NY-scrape:
   image: openstates/scrapers
   entrypoint: "poetry run os-update ny bills --realtime"
-  enabled: false
+  enabled: true
   environment: scrapers
   memory: 1024
   triggers:
@@ -13,13 +13,13 @@ NY-scrape:
 NY-text:
   image: openstates/core
   entrypoint: "poetry run os-text-extract update ny"
-  enabled: false
+  enabled: true
   environment: scrapers
 
 NY-events:
   image: openstates/scrapers
   entrypoint: "poetry run os-update ny events"
-  enabled: false
+  enabled: true
   environment: scrapers
   memory: 1024
   triggers:

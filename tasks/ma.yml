@@ -1,7 +1,7 @@
 MA-scrape:
   image: openstates/scrapers
   entrypoint: "poetry run os-update ma bills --realtime"
-  enabled: false
+  enabled: true
   environment: scrapers
   triggers:
     - cron: 0 */6 * * ?
@@ -13,7 +13,7 @@ MA-scrape:
 MA-scrape-full-lower:
   image: openstates/scrapers
   entrypoint: "poetry run os-update ma bills --realtime chamber=lower"
-  enabled: false
+  enabled: true
   environment: scrapers
   triggers:
     - cron: 0 5 * * 2,4,6 # tue,fri,sun
@@ -24,7 +24,7 @@ MA-scrape-full-lower:
 MA-scrape-full-upper:
   image: openstates/scrapers
   entrypoint: "poetry run os-update ma bills --realtime chamber=upper"
-  enabled: false
+  enabled: true
   environment: scrapers
   triggers:
     - cron: 0 5 * * 1,3,5 # mon,wed,thurs
@@ -35,13 +35,13 @@ MA-scrape-full-upper:
 MA-text:
   image: openstates/core
   entrypoint: "poetry run os-text-extract update ma"
-  enabled: false
+  enabled: true
   environment: scrapers
 
 MA-events:
   image: openstates/scrapers
   entrypoint: "poetry run os-update ma events"
-  enabled: false
+  enabled: true
   environment: scrapers
   triggers:
     - cron: 15 */6 * * ?

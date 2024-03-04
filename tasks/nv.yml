@@ -1,7 +1,7 @@
 NV-scrape:
   image: openstates/scrapers
   entrypoint: "poetry run os-update nv bills --realtime"
-  enabled: false
+  enabled: true
   environment: scrapers
   triggers:
 #    - cron: 0 */6 * * ?
@@ -13,13 +13,13 @@ NV-scrape:
 NV-text:
   image: openstates/core
   entrypoint: "poetry run os-text-extract update nv"
-  enabled: false
+  enabled: true
   environment: scrapers
 
 NV-events:
   image: openstates/scrapers
   entrypoint: "poetry run os-update nv events"
-  enabled: false
+  enabled: true
   environment: scrapers
   triggers:
     - cron: 0 */6 * * ?
