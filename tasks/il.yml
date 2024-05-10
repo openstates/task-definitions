@@ -1,6 +1,6 @@
 IL-scrape:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update il bills --realtime"
+  entrypoint: "poetry run os-update il bills"
   enabled: true
   environment: scrapers
   memory: 1024
