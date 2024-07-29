@@ -1,6 +1,6 @@
 MA-scrape:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update ma bills --realtime"
+  entrypoint: "poetry run os-update ma bills votes --realtime"
   enabled: true
   environment: scrapers
   triggers:
