@@ -1,14 +1,26 @@
-MA-scrape:
+# "normal" bill scrape disabled for now because per-chamber full scrapes have gotten a lot faster
+# so just trying full chamber scrapes for now 
+#MA-scrape:
+#  image: openstates/scrapers
+#  entrypoint: "poetry run os-update ma bills votes --realtime"
+#  enabled: true
+#  environment: scrapers
+#  triggers:
+#    - cron: 0 */6 * * ?
+#    - cron: 0 5 * * ?
+#  timeout_minutes: 3840  # 64 hours :(
+#  next_tasks:
+#    - MA-text
+
+MA-scrape-votes:
   image: openstates/scrapers
-  entrypoint: "poetry run os-update ma bills votes --realtime"
+  entrypoint: "poetry run os-update ma votes --realtime"
   enabled: true
   environment: scrapers
   triggers:
     - cron: 0 */6 * * ?
 #    - cron: 0 5 * * ?
   timeout_minutes: 3840  # 64 hours :(
-  next_tasks:
-    - MA-text
 
 MA-scrape-full-lower:
   image: openstates/scrapers
@@ -16,7 +28,8 @@ MA-scrape-full-lower:
   enabled: true
   environment: scrapers
   triggers:
-    - cron: 0 5 * * 2,4,6 # tue,fri,sun
+#    - cron: 0 5 * * 2,4,6 # tue,fri,sun
+    - cron: 12 5,17 * * * # twice a day
   timeout_minutes: 2880  # 48 hours :(
   next_tasks:
     - MA-text
@@ -27,7 +40,8 @@ MA-scrape-full-upper:
   enabled: true
   environment: scrapers
   triggers:
-    - cron: 0 5 * * 1,3,5 # mon,wed,thurs
+#    - cron: 0 5 * * 1,3,5 # mon,wed,thurs
+    - cron: 13 23,11 * * * # twice a day, offset with above
   timeout_minutes: 2160  # 36 hours :(
   next_tasks:
     - MA-text
