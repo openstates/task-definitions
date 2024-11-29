@@ -5,7 +5,7 @@ NV-scrape:
   environment: scrapers
   triggers:
 #    - cron: 0 */6 * * ?
-    - cron: 0 8 * * ?
+    - cron: 0 2,8,14,20 * * ?
   timeout_minutes: 360
   next_tasks:
     - NV-text
