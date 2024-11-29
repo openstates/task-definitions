@@ -4,7 +4,7 @@ US-scrape:
   enabled: true
   environment: scrapers
   triggers:
-    - cron: 0 8 * * ?
+    - cron: 0 8,20 * * ?
   timeout_minutes: 1440
   next_tasks:
     - US-text
