@@ -5,7 +5,7 @@ CA-scrape:
   environment: scrapers
   triggers:
 #    - cron: 0 0,12 * * ?
-    - cron: 0, */4, * * ?
+    - cron: 0 */4 * * ?
   memory: 4096
   cpu: 512
   timeout_minutes: 360
