@@ -1,5 +1,5 @@
 # "normal" bill scrape disabled for now because per-chamber full scrapes have gotten a lot faster
-# so just trying full chamber scrapes for now 
+# so just trying full chamber scrapes for now
 #MA-scrape:
 #  image: openstates/scrapers
 #  entrypoint: "poetry run os-update ma bills votes --realtime"
