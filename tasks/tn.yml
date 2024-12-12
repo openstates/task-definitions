@@ -16,12 +16,3 @@ TN-text:
   entrypoint: "poetry run os-text-extract update tn"
   enabled: true
   environment: scrapers
-
-TN-events:
-  image: openstates/scrapers
-  entrypoint: "poetry run os-update tn events"
-  enabled: true
-  environment: scrapers
-  triggers:
-    - cron: 0 */6 * * ?
-  timeout_minutes: 60

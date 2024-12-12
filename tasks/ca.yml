@@ -17,14 +17,3 @@ CA-text:
   entrypoint: "poetry run os-text-extract update ca"
   enabled: true
   environment: scrapers
-
-CA-events:
-  image: openstates/scrapers-california
-  entrypoint: "poetry run os-update ca events_web"
-  enabled: true
-  environment: scrapers
-  triggers:
-    - cron: 30 */6 * * ?
-  memory: 4096
-  cpu: 512
-  timeout_minutes: 60

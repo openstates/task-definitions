@@ -15,12 +15,3 @@ ME-text:
   entrypoint: "poetry run os-text-extract update me"
   enabled: true
   environment: scrapers
-
-ME-events:
-  image: openstates/scrapers
-  entrypoint: "poetry run os-update me events"
-  enabled: true
-  environment: scrapers
-  triggers:
-    - cron: 20 */6 * * ?
-  timeout_minutes: 60

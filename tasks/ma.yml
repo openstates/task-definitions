@@ -51,12 +51,3 @@ MA-text:
   entrypoint: "poetry run os-text-extract update ma"
   enabled: true
   environment: scrapers
-
-MA-events:
-  image: openstates/scrapers
-  entrypoint: "poetry run os-update ma events"
-  enabled: true
-  environment: scrapers
-  triggers:
-    - cron: 15 */6 * * ?
-  timeout_minutes: 60

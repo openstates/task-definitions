@@ -15,12 +15,3 @@ NV-text:
   entrypoint: "poetry run os-text-extract update nv"
   enabled: true
   environment: scrapers
-
-NV-events:
-  image: openstates/scrapers
-  entrypoint: "poetry run os-update nv events"
-  enabled: true
-  environment: scrapers
-  triggers:
-    - cron: 0 */6 * * ?
-  timeout_minutes: 60

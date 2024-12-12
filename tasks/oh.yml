@@ -15,12 +15,3 @@ OH-text:
   entrypoint: "poetry run os-text-extract update oh"
   enabled: true
   environment: scrapers
-
-OH-events:
-  image: openstates/scrapers
-  entrypoint: "poetry run os-update oh events"
-  enabled: true
-  environment: scrapers
-  triggers:
-    - cron: 0 */6 * * ?
-  timeout_minutes: 60
