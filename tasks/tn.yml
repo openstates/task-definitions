@@ -1,7 +1,7 @@
 TN-scrape:
   image: openstates/scrapers
   entrypoint: "poetry run os-update tn bills --realtime"
-  enabled: true
+  enabled: false
   memory: 1024
   environment: scrapers
   triggers:
@@ -14,5 +14,5 @@ TN-scrape:
 TN-text:
   image: openstates/core
   entrypoint: "poetry run os-text-extract update tn"
-  enabled: true
+  enabled: false
   environment: scrapers

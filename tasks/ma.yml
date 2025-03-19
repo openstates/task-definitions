@@ -15,7 +15,7 @@
 MA-scrape-votes:
   image: openstates/scrapers
   entrypoint: "poetry run os-update ma votes --realtime"
-  enabled: true
+  enabled: false
   environment: scrapers
   triggers:
     - cron: 0 */6 * * ?

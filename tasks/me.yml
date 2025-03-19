@@ -1,7 +1,7 @@
 ME-scrape:
   image: openstates/scrapers
   entrypoint: "poetry run os-update me bills --realtime"
-  enabled: true
+  enabled: false
   environment: scrapers
   triggers:
     - cron: 19 */4 * * ?
@@ -13,5 +13,5 @@ ME-scrape:
 ME-text:
   image: openstates/core
   entrypoint: "poetry run os-text-extract update me"
-  enabled: true
+  enabled: false
   environment: scrapers
