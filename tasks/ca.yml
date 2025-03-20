@@ -1,7 +1,7 @@
 CA-scrape:
   image: openstates/scrapers-california
   entrypoint: "/ca-entrypoint.sh bills"
-  enabled: true
+  enabled: false
   environment: scrapers
   triggers:
 #    - cron: 0 0,12 * * ?
@@ -15,5 +15,5 @@ CA-scrape:
 CA-text:
   image: openstates/core
   entrypoint: "poetry run os-text-extract update ca"
-  enabled: true
+  enabled: false
   environment: scrapers
